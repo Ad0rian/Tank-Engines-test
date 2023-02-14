@@ -390,7 +390,14 @@
 "Assets/Scripts/Common/Shaker.cs"
 "Assets/Scripts/Common/SimpleTimer.cs"
 "Assets/Scripts/Common/SpriteFading.cs"
+"Assets/Scripts/Entities/AmmoFill.cs"
+"Assets/Scripts/Entities/ShieldFill.cs"
+"Assets/Scripts/Entities/SpeedFill.cs"
+"Assets/Scripts/HUD/AmmoHUD.cs"
+"Assets/Scripts/HUD/ShieldHUD.cs"
+"Assets/Scripts/HUD/SpeedHUD.cs"
 "Assets/Scripts/Tank/Tank2DMovement.cs"
+"Assets/Scripts/Tank/Tank2DShootSystem.cs"
 -langversion:9.0
 
 /deterministic

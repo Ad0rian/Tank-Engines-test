@@ -551,11 +551,19 @@ public class Tank2DMovement: MonoBehaviour
         }
 
 
+        public Tank2DShootSystem weapon;
 
         private void Update()
         {
             // Handles the user input
             HandleInput();
+
+            if(Input.GetButtonDown("Shoot")){
+                weapon.Shoot();
+            }
+            if(Input.GetButtonDown("Shield")){
+                weapon.Shield();
+            }
         }
         
         private void FixedUpdate()
