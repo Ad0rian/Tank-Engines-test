@@ -71,6 +71,10 @@ public class Tank2DShootSystem : MonoBehaviour
 
     public void AddShield()
     {
+        if (shieldStatus)
+        {
+            shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("No");
+        }
         shieldStatus=true;
         speedStatus=false;
         UpdatingHUD();
@@ -78,6 +82,10 @@ public class Tank2DShootSystem : MonoBehaviour
 
     public void AddSpeed()
     {
+        if (speedStatus)
+        {
+           speedHUD.speedTank.GetComponent<Animator>().SetTrigger("No"); 
+        }
         shieldStatus=false;
         speedStatus=true;
         UpdatingHUD();
@@ -89,7 +97,11 @@ public class Tank2DShootSystem : MonoBehaviour
 
         if (speedStatus)speedHUD.speedTank.GetComponent<Animator>().SetTrigger("Speed");
 
-        if (!shieldStatus && !speedStatus) speedHUD.speedTank.GetComponent<Animator>().SetTrigger("No");   
+        if (!shieldStatus && !speedStatus)
+        {
+            speedHUD.speedTank.GetComponent<Animator>().SetTrigger("No"); 
+            shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("No");
+        }
 
 
 

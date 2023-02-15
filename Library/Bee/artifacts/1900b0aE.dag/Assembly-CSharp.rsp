@@ -391,6 +391,8 @@
 "Assets/Scripts/Common/SimpleTimer.cs"
 "Assets/Scripts/Common/SpriteFading.cs"
 "Assets/Scripts/Entities/AmmoFill.cs"
+"Assets/Scripts/Entities/Cacti/CactiEnemy.cs"
+"Assets/Scripts/Entities/Cacti/CactiEnemyHitbox.cs"
 "Assets/Scripts/Entities/ShieldFill.cs"
 "Assets/Scripts/Entities/SpeedFill.cs"
 "Assets/Scripts/HUD/AmmoHUD.cs"
