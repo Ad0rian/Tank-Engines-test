@@ -14,6 +14,7 @@ public class Tank2DMovement: MonoBehaviour
     void Start()
     {
         anim = GetComponent<Animator>();
+        
     }
             private Rigidbody2D Rigidbody
             {
@@ -46,14 +47,14 @@ public class Tank2DMovement: MonoBehaviour
                 get => forwardSpeed;
                 set => forwardSpeed = Mathf.Max(0.0f, value);
             }
-            [SerializeField] private float forwardSpeed = 10.0f;
+            [SerializeField] public float forwardSpeed = 10.0f;
 
             public float BackwardSpeed
             {
                 get => backwardSpeed;
                 set => backwardSpeed = Mathf.Max(0.0f, value);
             }
-            [SerializeField] private float backwardSpeed = 6.0f;
+            [SerializeField] public float backwardSpeed = 6.0f;
 
               public float TurnSpeed
             {
@@ -555,8 +556,24 @@ public class Tank2DMovement: MonoBehaviour
 
         private void Update()
         {
+            anim.SetFloat("Speed", GetComponent<Rigidbody2D>().velocity.magnitude);
             // Handles the user input
             HandleInput();
+
+
+
+            if (Input.GetButton("Vertical") && Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") > 0)
+                {
+                    anim.SetBool("Forward",true);
+                    anim.SetBool("Backward", false);
+                }
+
+            if (Input.GetButton("Vertical") && Input.GetAxis("Vertical") < 0 || Input.GetAxis("Vertical") < 0 )
+                {
+                  anim.SetBool("Backward", true);
+                  anim.SetBool("Forward",false);
+                } 
+            
 
             if(Input.GetButtonDown("Shoot")){
                 weapon.Shoot();

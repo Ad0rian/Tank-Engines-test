@@ -5,16 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - ForeGround
+  - BackGround
+  - Boom
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - BackGroundLayer
   - Water
   - UI
+  - CannonLayer
+  - ForeGroundLayer
   - EffectsLayer
-  - 
-  - 
   - 
   - 
   - 
@@ -41,4 +44,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: BackGroundLayer
+    uniqueID: 378073501
+    locked: 0
+  - name: CannonLayer
+    uniqueID: 2233112633
+    locked: 0
+  - name: ForeGroundLayer
+    uniqueID: 3749466191
     locked: 0

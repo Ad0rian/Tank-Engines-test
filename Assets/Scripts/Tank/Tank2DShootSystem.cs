@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tank2DControllers;
 
 public class Tank2DShootSystem : MonoBehaviour
 {
@@ -14,14 +15,19 @@ public class Tank2DShootSystem : MonoBehaviour
     public SpeedHUD speedHUD;
     public Animator Cannon;
     public GameObject ShieldAbility;
+    public GameObject SpeedAbilityHUD;
+    public Tank2DMovement tank2DMovement;
+    public TimerSlider SpeedAbilitytimer;
     Animator animationBullet;
-
+    private float fSpeed, bSpeed;
 
 
     // Start is called before the first frame update
     void Start()
     {
         currentAmmo = startAmmo;
+        fSpeed = tank2DMovement.forwardSpeed;
+        bSpeed = tank2DMovement.backwardSpeed;
         UpdatingHUD();
     }
 
@@ -53,6 +59,9 @@ public class Tank2DShootSystem : MonoBehaviour
     {
         if (speedStatus)
         {
+            SpeedAbilityHUD.SetActive(false);
+            tank2DMovement.forwardSpeed = fSpeed;
+            tank2DMovement.backwardSpeed = bSpeed;
             speedStatus = false;
             UpdatingHUD();     
         }
@@ -75,6 +84,9 @@ public class Tank2DShootSystem : MonoBehaviour
         {
             shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("No");
         }
+        SpeedAbilityHUD.SetActive(false);
+        tank2DMovement.forwardSpeed = fSpeed;
+        tank2DMovement.backwardSpeed = bSpeed;
         shieldStatus=true;
         speedStatus=false;
         UpdatingHUD();
@@ -88,14 +100,18 @@ public class Tank2DShootSystem : MonoBehaviour
         }
         shieldStatus=false;
         speedStatus=true;
+        SpeedAbilityHUD.SetActive(true);
+        SpeedAbilitytimer.RestartTimer();
+        tank2DMovement.forwardSpeed = fSpeed * 2.0f;
+        tank2DMovement.backwardSpeed = bSpeed * 2.0f;
         UpdatingHUD();
     }
 
     public void UpdatingHUD()
     {
-        if (shieldStatus)shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("Shield");
+        if (shieldStatus && !speedStatus)shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("Shield");
 
-        if (speedStatus)speedHUD.speedTank.GetComponent<Animator>().SetTrigger("Speed");
+        if (speedStatus && !shieldStatus)speedHUD.speedTank.GetComponent<Animator>().SetTrigger("Speed");
 
         if (!shieldStatus && !speedStatus)
         {
@@ -115,7 +131,10 @@ public class Tank2DShootSystem : MonoBehaviour
                 animationBullet.SetTrigger("selectedAmmo");
                 bulletHUD.SetActive(true);
             }
-            else animationBullet.SetTrigger("yesAmmo");
+            else {
+                animationBullet.SetTrigger("yesAmmo");
+                bulletHUD.SetActive(true);
+            }
             i--;
         }
     }
