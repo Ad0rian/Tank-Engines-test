@@ -8,6 +8,10 @@ TagManager:
   - ForeGround
   - BackGround
   - Boom
+  - ammopoint
+  - shieldpoint
+  - speedpoint
+  - cactipoint
   layers:
   - Default
   - TransparentFX

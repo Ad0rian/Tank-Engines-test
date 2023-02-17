@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class SpeedFill : MonoBehaviour
 {
+    public UnityEngine.Events.UnityEvent m_MyEvent;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Tank2DShootSystem weapon = collision.gameObject.GetComponentInChildren<Tank2DShootSystem>();
         if (weapon)
         {
             weapon.AddSpeed();
+            m_MyEvent.Invoke();
             Destroy(gameObject);
         }
     } 

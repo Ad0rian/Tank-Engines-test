@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class AmmoFill : MonoBehaviour
 {
-
-    public int ammoAmount = 1;
+    public UnityEngine.Events.UnityEvent m_MyEvent;
+    public int ammoAmount = 5;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Tank2DShootSystem weapon = collision.gameObject.GetComponentInChildren<Tank2DShootSystem>();
         if (weapon)
         {
             weapon.AddAmmo(ammoAmount);
+            m_MyEvent.Invoke();
             Destroy(gameObject);
         }
     }
+
+
 }

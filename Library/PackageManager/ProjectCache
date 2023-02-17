@@ -5,7 +5,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638118033526835812
+      ticks: 638122494852413325
     m_Hash: 2462500535
   m_LockFileStatus:
     m_FilePath: D:/Users/adrij/Tank Engines/Packages/packages-lock.json
@@ -13,7 +13,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 638118033531794572
+      ticks: 638122494852643364
     m_Hash: 664089967
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
@@ -111,6 +111,7 @@ m_ResolvedPackages:
     - 2.9.4
     - 2.9.5
     - 3.0.0-pre.3
+    - 3.0.0-pre.4
     compatible:
     - 2.8.9
     - 2.9.0-pre.1
@@ -783,6 +784,7 @@ m_ResolvedPackages:
     - 1.3.0
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -793,6 +795,7 @@ m_ResolvedPackages:
     - 1.3.0
     - 1.3.1
     - 1.3.2
+    - 1.3.3
     - 2.0.1-exp.1
     - 2.0.1-exp.2
     - 2.0.1-pre.12
@@ -1098,7 +1101,9 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.7.1
     - 1.7.2
+    - 1.7.3
     - 1.8.0
+    - 1.8.1
     compatible:
     - 1.6.4
     - 1.7.0-pre.1
@@ -1106,7 +1111,9 @@ m_ResolvedPackages:
     - 1.7.0
     - 1.7.1
     - 1.7.2
+    - 1.7.3
     - 1.8.0
+    - 1.8.1
     verified: 1.6.4
   dependencies:
   - name: com.unity.modules.director
@@ -4282,7 +4289,7 @@ m_ResolvedPackages:
     email: 
     url: 
   category: 2D
-  type: 
+  type: asset
   description: 2D Common is a package that contains shared functionalities that are
     used by most of the other 2D packages.
   status: 0
@@ -4309,6 +4316,8 @@ m_ResolvedPackages:
     - 4.0.3
     - 4.0.4
     - 4.1.0
+    - 4.2.0
+    - 4.2.1
     - 5.0.0-pre.1
     - 5.0.0-pre.2
     - 5.0.0
@@ -4319,10 +4328,21 @@ m_ResolvedPackages:
     - 6.0.1
     - 6.0.2
     - 6.0.3
+    - 6.0.4
+    - 6.0.5
     - 6.0.6
     - 7.0.0-pre.3
     - 7.0.0-pre.4
     - 7.0.0
+    - 7.0.1
+    - 7.0.2
+    - 7.0.3
+    - 8.0.0-pre.1
+    - 8.0.0-pre.2
+    - 8.0.0
+    - 8.0.1
+    - 9.0.0-pre.1
+    - 9.0.0-pre.2
     compatible:
     - 6.0.6
     verified: 6.0.6
@@ -4362,9 +4382,9 @@ m_ResolvedPackages:
     isDefault: 1
     capabilities: 7
     configSource: 0
-  hideInEditor: 1
+  hideInEditor: 0
   isAssetStorePackage: 0
-  datePublishedTicks: 0
+  datePublishedTicks: 638035874770000000
   documentationUrl: 
   hasRepository: 1
   repository:

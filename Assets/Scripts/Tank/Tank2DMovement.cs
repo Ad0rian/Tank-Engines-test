@@ -9,7 +9,7 @@ namespace Tank2DControllers
 {
 public class Tank2DMovement: MonoBehaviour
 {
-    
+    public bool MouseAim;
     private Animator anim;
     void Start()
     {
@@ -196,6 +196,9 @@ public class Tank2DMovement: MonoBehaviour
 
 
         // Keyboard Input (names that are within the input manager).
+
+        public string ShootInput ="Shoot";
+        public string ShieldInput = "Shield";
         public string keyboardHorizontalInput = "Horizontal";
         public string keyboardVerticalInput = "Vertical";
         
@@ -467,7 +470,7 @@ public class Tank2DMovement: MonoBehaviour
             var useMouse = mouseInput != _previousMouseInput;
             
             // If new input has been found, translate it and return.
-            if(useMouse)
+            if(useMouse && MouseAim)
             {
                 _previousMouseInput = mouseInput;
                 _previousJoystickInput = mouseInput;
@@ -562,23 +565,23 @@ public class Tank2DMovement: MonoBehaviour
 
 
 
-            if (Input.GetButton("Vertical") && Input.GetAxis("Vertical") > 0 || Input.GetAxis("Vertical") > 0)
+            if (Input.GetButton(keyboardVerticalInput) && Input.GetAxis(keyboardVerticalInput) > 0 || Input.GetAxis(keyboardVerticalInput) > 0)
                 {
                     anim.SetBool("Forward",true);
                     anim.SetBool("Backward", false);
                 }
 
-            if (Input.GetButton("Vertical") && Input.GetAxis("Vertical") < 0 || Input.GetAxis("Vertical") < 0 )
+            if (Input.GetButton(keyboardVerticalInput) && Input.GetAxis(keyboardVerticalInput) < 0 || Input.GetAxis(keyboardVerticalInput) < 0 )
                 {
                   anim.SetBool("Backward", true);
                   anim.SetBool("Forward",false);
                 } 
             
 
-            if(Input.GetButtonDown("Shoot")){
+            if(Input.GetButtonDown(ShootInput)){
                 weapon.Shoot();
             }
-            if(Input.GetButtonDown("Shield")){
+            if(Input.GetButtonDown(ShieldInput)){
                 weapon.Shield();
             }
         }

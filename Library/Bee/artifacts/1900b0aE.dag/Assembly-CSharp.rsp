@@ -112,6 +112,7 @@
 -define:ENABLE_TERRAIN
 -define:ENABLE_TILEMAP
 -define:ENABLE_TIMELINE
+-define:ENABLE_INPUT_SYSTEM
 -define:ENABLE_LEGACY_INPUT_MANAGER
 -define:TEXTCORE_FONT_ENGINE_1_5_OR_NEWER
 -define:CSHARP_7_OR_LATER
@@ -376,6 +377,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Common/AnimationPlay.cs"
+"Assets/Scripts/Common/CameraControl.cs"
 "Assets/Scripts/Common/ChangeColor.cs"
 "Assets/Scripts/Common/ExitGame.cs"
 "Assets/Scripts/Common/infiniteBG.cs"
@@ -385,6 +387,7 @@
 "Assets/Scripts/Common/LoadScene.cs"
 "Assets/Scripts/Common/mainMenuInput.cs"
 "Assets/Scripts/Common/MenuIni.cs"
+"Assets/Scripts/Common/Objectives.cs"
 "Assets/Scripts/Common/PauseMenu.cs"
 "Assets/Scripts/Common/respawnThings.cs"
 "Assets/Scripts/Common/SetActive.cs"
@@ -395,6 +398,8 @@
 "Assets/Scripts/Entities/AmmoFill.cs"
 "Assets/Scripts/Entities/Cacti/CactiEnemy.cs"
 "Assets/Scripts/Entities/Cacti/CactiEnemyHitbox.cs"
+"Assets/Scripts/Entities/Cacti/CactiSpawner.cs"
+"Assets/Scripts/Entities/Fillerposition.cs"
 "Assets/Scripts/Entities/ShieldFill.cs"
 "Assets/Scripts/Entities/SpeedFill.cs"
 "Assets/Scripts/HUD/AmmoHUD.cs"
@@ -402,6 +407,7 @@
 "Assets/Scripts/HUD/SpeedHUD.cs"
 "Assets/Scripts/Tank/Bullet.cs"
 "Assets/Scripts/Tank/BulletTimer.cs"
+"Assets/Scripts/Tank/Tank2DHitbox.cs"
 "Assets/Scripts/Tank/Tank2DMovement.cs"
 "Assets/Scripts/Tank/Tank2DShootSystem.cs"
 -langversion:9.0
