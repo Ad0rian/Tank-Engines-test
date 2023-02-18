@@ -18,6 +18,8 @@ public class Tank2DShootSystem : MonoBehaviour
     public GameObject SpeedAbilityHUD;
     public Tank2DMovement tank2DMovement;
     public TimerSlider SpeedAbilitytimer;
+    public Effects EffectOnomatopoeiaShoot;
+    public Effects EffectOnomatopoeiaShield;
     Animator animationBullet;
     private float fSpeed, bSpeed;
 
@@ -38,6 +40,7 @@ public class Tank2DShootSystem : MonoBehaviour
             Cannon.SetTrigger("Shoot");
             GameObject bullet = Instantiate(bulletObject, firePoint.position, firePoint.rotation);
             bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
+            EffectOnomatopoeiaShoot.InstantiateEffect();
             currentAmmo --;
             UpdatingHUD();
         }
@@ -48,6 +51,7 @@ public class Tank2DShootSystem : MonoBehaviour
     {
         if (shieldStatus)
         {
+            EffectOnomatopoeiaShield.InstantiateEffect();
             ShieldAbility.SetActive(true);
             shieldStatus = false;
             UpdatingHUD();
@@ -82,7 +86,9 @@ public class Tank2DShootSystem : MonoBehaviour
     {
         if (shieldStatus)
         {
-            shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("No");
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("Shield",false);
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("No",true);
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("Speed",false);
         }
         SpeedAbilityHUD.SetActive(false);
         tank2DMovement.forwardSpeed = fSpeed;
@@ -96,7 +102,9 @@ public class Tank2DShootSystem : MonoBehaviour
     {
         if (speedStatus)
         {
-           speedHUD.speedTank.GetComponent<Animator>().SetTrigger("No"); 
+           speedHUD.speedTank.GetComponent<Animator>().SetBool("Speed",false);
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("Shield",false);
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("No",true);
         }
         shieldStatus=false;
         speedStatus=true;
@@ -109,14 +117,28 @@ public class Tank2DShootSystem : MonoBehaviour
 
     public void UpdatingHUD()
     {
-        if (shieldStatus && !speedStatus)shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("Shield");
+        if (shieldStatus && !speedStatus)
+        {
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("Shield",true);
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("No",false);
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("Speed",false);
 
-        if (speedStatus && !shieldStatus)speedHUD.speedTank.GetComponent<Animator>().SetTrigger("Speed");
+        }
+        if (speedStatus && !shieldStatus)
+        {
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("Speed",true);
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("Shield",false);
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("No",false);
+        }
 
         if (!shieldStatus && !speedStatus)
         {
-            speedHUD.speedTank.GetComponent<Animator>().SetTrigger("No"); 
-            shieldHUD.shieldTank.GetComponent<Animator>().SetTrigger("No");
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("No" , true); 
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("No", true);
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("Speed" , false); 
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("Speed", false);
+            speedHUD.speedTank.GetComponent<Animator>().SetBool("Shield" , false); 
+            shieldHUD.shieldTank.GetComponent<Animator>().SetBool("Shield", false);
         }
 
 
@@ -128,11 +150,13 @@ public class Tank2DShootSystem : MonoBehaviour
             if (i > currentAmmo) bulletHUD.SetActive(false);
             else if(i == currentAmmo)
             {
-                animationBullet.SetTrigger("selectedAmmo");
+                animationBullet.SetBool("selectedAmmo",true);
+                animationBullet.SetBool("yesAmmo",false);
                 bulletHUD.SetActive(true);
             }
             else {
-                animationBullet.SetTrigger("yesAmmo");
+                animationBullet.SetBool("yesAmmo",true);
+                animationBullet.SetBool("selectedAmmo",false);
                 bulletHUD.SetActive(true);
             }
             i--;

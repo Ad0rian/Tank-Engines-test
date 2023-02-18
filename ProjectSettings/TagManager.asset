@@ -12,6 +12,8 @@ TagManager:
   - shieldpoint
   - speedpoint
   - cactipoint
+  - tankpoint
+  - tankpointboy
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,7 @@ namespace Tank2DControllers
 {
 public class Tank2DMovement: MonoBehaviour
 {
+    public Effects EffectOnomatopoeiaSpeed;
     public bool MouseAim;
     private Animator anim;
     void Start()
@@ -569,12 +570,15 @@ public class Tank2DMovement: MonoBehaviour
                 {
                     anim.SetBool("Forward",true);
                     anim.SetBool("Backward", false);
+                    
+                    //EffectOnomatopoeiaSpeed.InstantiateEffect();
                 }
 
             if (Input.GetButton(keyboardVerticalInput) && Input.GetAxis(keyboardVerticalInput) < 0 || Input.GetAxis(keyboardVerticalInput) < 0 )
                 {
-                  anim.SetBool("Backward", true);
-                  anim.SetBool("Forward",false);
+                    anim.SetBool("Backward", true);
+                    anim.SetBool("Forward",false);
+                    //EffectOnomatopoeiaSpeed.InstantiateEffect();
                 } 
             
 

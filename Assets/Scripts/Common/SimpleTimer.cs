@@ -6,7 +6,7 @@ public class SimpleTimer : MonoBehaviour
 {
     public UnityEngine.Events.UnityEvent m_MyEvent;
     public float targetTime;
-
+    public bool deactivateobject = true;
     private float counterTime;
 
     private void Start()
@@ -27,9 +27,9 @@ public class SimpleTimer : MonoBehaviour
    
    void timerEnded()
    {
-      m_MyEvent.Invoke();
       counterTime= targetTime;
-      gameObject.SetActive(false);
+      m_MyEvent.Invoke();
+      if (deactivateobject)gameObject.SetActive(false);
    }
 
    }
