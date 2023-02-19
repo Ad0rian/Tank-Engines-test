@@ -8,7 +8,6 @@ ScriptsOnlyBuild:
     - CactiEnemy
     - CactiEnemyHitbox
     - CactiSpawner
-    - Complete.CameraControl
     - Effects
     - ExitGame
     - Fillerposition
@@ -32,8 +31,10 @@ ScriptsOnlyBuild:
     - mainMenuInput
     Cinemachine.dll:
     - Cinemachine.CinemachineBrain
+    - Cinemachine.CinemachineComposer
     - Cinemachine.CinemachineFramingTransposer
     - Cinemachine.CinemachinePipeline
+    - Cinemachine.CinemachineTargetGroup
     - Cinemachine.CinemachineVirtualCamera
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -76,6 +77,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Outline
     - UnityEngine.UI.Slider
     - UnityEngine.UI.Text
   serializedClasses:
@@ -83,6 +85,7 @@ ScriptsOnlyBuild:
     - Cinemachine.CinemachineBlendDefinition
     - Cinemachine.CinemachineBrain/BrainEvent
     - Cinemachine.CinemachineBrain/VcamActivatedEvent
+    - Cinemachine.CinemachineTargetGroup/Target
     - Cinemachine.CinemachineVirtualCameraBase/TransitionParams
     - Cinemachine.LensSettings
     UnityEngine.CoreModule:
@@ -301,8 +304,8 @@ ScriptsOnlyBuild:
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
   - assembly: UnityEngine.CoreModule
-    fullTypeName: UnityEngine.GameObject
-    methodName: SetActive
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -312,6 +315,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.Behaviour
+    methodName: set_enabled
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
@@ -333,6 +342,12 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.Behaviour
     methodName: set_enabled
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
+  - assembly: UnityEngine.CoreModule
+    fullTypeName: UnityEngine.GameObject
+    methodName: SetActive
   - assembly: UnityEngine.CoreModule
     fullTypeName: UnityEngine.GameObject
     methodName: SetActive
@@ -474,8 +489,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -547,8 +560,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
-    - Class: 89
-      Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
     - Class: 95
@@ -582,8 +593,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 3514}
-    - Class: 114
       Script: {instanceID: 4000}
     - Class: 114
       Script: {instanceID: 4114}
@@ -602,6 +611,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4940}
     - Class: 114
+      Script: {instanceID: 4990}
+    - Class: 114
+      Script: {instanceID: 5574}
+    - Class: 114
       Script: {instanceID: 5928}
     - Class: 114
       Script: {instanceID: 6510}
@@ -619,6 +632,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 7624}
     - Class: 114
       Script: {instanceID: 7672}
+    - Class: 114
+      Script: {instanceID: 7786}
     - Class: 114
       Script: {instanceID: 7946}
     - Class: 114
@@ -1048,12 +1063,6 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 01c92227904d0034df6f0a0a2af91042
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: Complete
-    className: CameraControl
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -1124,12 +1133,6 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
     className: BaseInput
-  - hash:
-      serializedVersion: 2
-      Hash: bd46a96e92ba337d11e38c09a9c4bae9
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: ChangeColor
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
@@ -1924,24 +1927,6 @@ ScriptsOnlyBuild:
     className: CinemachineTrackedDolly
   - hash:
       serializedVersion: 2
-      Hash: f40ae44e5a8b898ba9abb803df43b0e2
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: infiniteBG
-  - hash:
-      serializedVersion: 2
-      Hash: bbe0c4831198be6185e89d50ffd3295f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: SpriteFading
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: Shaker
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.VisualScripting.Core.dll
     namespaceName: Unity.VisualScripting
@@ -2112,4 +2097,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/PlayableMap.unity
-  playerPath: D:/Users/adrij/DONE
+  playerPath: D:/Users/adrij/The QTG Done

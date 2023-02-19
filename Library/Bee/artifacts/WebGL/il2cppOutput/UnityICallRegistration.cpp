@@ -1922,10 +1922,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Material_EnableKeyword();
 		Register_UnityEngine_Material_EnableKeyword();
 
-		//System.Void UnityEngine.Material::GetTextureScaleAndOffsetImpl_Injected(System.Int32,UnityEngine.Vector4&)
-		void Register_UnityEngine_Material_GetTextureScaleAndOffsetImpl_Injected();
-		Register_UnityEngine_Material_GetTextureScaleAndOffsetImpl_Injected();
-
 		//System.Void UnityEngine.Material::SetFloatImpl(System.Int32,System.Single)
 		void Register_UnityEngine_Material_SetFloatImpl();
 		Register_UnityEngine_Material_SetFloatImpl();
@@ -1933,10 +1929,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Material::SetTextureImpl(System.Int32,UnityEngine.Texture)
 		void Register_UnityEngine_Material_SetTextureImpl();
 		Register_UnityEngine_Material_SetTextureImpl();
-
-		//System.Void UnityEngine.Material::SetTextureOffsetImpl_Injected(System.Int32,UnityEngine.Vector2&)
-		void Register_UnityEngine_Material_SetTextureOffsetImpl_Injected();
-		Register_UnityEngine_Material_SetTextureOffsetImpl_Injected();
 
 		//UnityEngine.Texture UnityEngine.Material::GetTextureImpl(System.Int32)
 		void Register_UnityEngine_Material_GetTextureImpl();
@@ -2894,10 +2886,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Renderer_get_sortingOrder();
 		Register_UnityEngine_Renderer_get_sortingOrder();
 
-		//UnityEngine.Material UnityEngine.Renderer::GetMaterial()
-		void Register_UnityEngine_Renderer_GetMaterial();
-		Register_UnityEngine_Renderer_GetMaterial();
-
 	//End Registrations for type : UnityEngine.Renderer
 
 	//Start Registrations for type : UnityEngine.Rendering.GraphicsSettings
@@ -3219,18 +3207,6 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Sprite_get_vertices();
 
 	//End Registrations for type : UnityEngine.Sprite
-
-	//Start Registrations for type : UnityEngine.SpriteRenderer
-
-		//System.Void UnityEngine.SpriteRenderer::get_color_Injected(UnityEngine.Color&)
-		void Register_UnityEngine_SpriteRenderer_get_color_Injected();
-		Register_UnityEngine_SpriteRenderer_get_color_Injected();
-
-		//System.Void UnityEngine.SpriteRenderer::set_color_Injected(UnityEngine.Color&)
-		void Register_UnityEngine_SpriteRenderer_set_color_Injected();
-		Register_UnityEngine_SpriteRenderer_set_color_Injected();
-
-	//End Registrations for type : UnityEngine.SpriteRenderer
 
 	//Start Registrations for type : UnityEngine.SystemInfo
 
