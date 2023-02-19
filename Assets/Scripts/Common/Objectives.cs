@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Objectives : MonoBehaviour
 {
     public Text scoretext;
+    public Text objectivetext;
+    public Text timertext;
     public int maxpunctuation;
     public UnityEngine.Events.UnityEvent m_MyEventscore;
     public UnityEngine.Events.UnityEvent m_MyEventpoints;
@@ -16,6 +18,7 @@ public class Objectives : MonoBehaviour
     void Update()
     {
         timerpunctuation += Time.deltaTime;
+        timertext.text = Mathf.RoundToInt(timerpunctuation).ToString();
         if(maxpunctuation <= objective || maxpunctuation <= objectivemulti1 || maxpunctuation <= objectivemulti2)
         {
             EndGame();
@@ -29,16 +32,19 @@ public class Objectives : MonoBehaviour
         {
             case 0:
             objective += 1;
+            objectivetext.text = objective.ToString();
             if(maxpunctuation > objective)lifes();
             break;
 
             case 1:
             objectivemulti1 += 1;
+            objectivetext.text = objectivemulti1.ToString();
             if(maxpunctuation > objectivemulti1)lifes();
             break;
 
             case 2:
             objectivemulti2 += 1;
+            objectivetext.text = objectivemulti2.ToString();
             if(maxpunctuation > objectivemulti2)lifes();
             break;
 

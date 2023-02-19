@@ -7091,24 +7091,28 @@ struct Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6  : public MonoBehavi
 {
 	// UnityEngine.UI.Text Objectives::scoretext
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___scoretext_4;
+	// UnityEngine.UI.Text Objectives::objectivetext
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___objectivetext_5;
+	// UnityEngine.UI.Text Objectives::timertext
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___timertext_6;
 	// System.Int32 Objectives::maxpunctuation
-	int32_t ___maxpunctuation_5;
+	int32_t ___maxpunctuation_7;
 	// UnityEngine.Events.UnityEvent Objectives::m_MyEventscore
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventscore_6;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventscore_8;
 	// UnityEngine.Events.UnityEvent Objectives::m_MyEventpoints
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventpoints_7;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventpoints_9;
 	// System.Int32 Objectives::tankplayer
-	int32_t ___tankplayer_8;
+	int32_t ___tankplayer_10;
 	// System.Int32 Objectives::objective
-	int32_t ___objective_9;
+	int32_t ___objective_11;
 	// System.Int32 Objectives::objectivemulti1
-	int32_t ___objectivemulti1_10;
+	int32_t ___objectivemulti1_12;
 	// System.Int32 Objectives::objectivemulti2
-	int32_t ___objectivemulti2_11;
+	int32_t ___objectivemulti2_13;
 	// System.Single Objectives::timerpunctuation
-	float ___timerpunctuation_12;
+	float ___timerpunctuation_14;
 	// System.String Objectives::winner
-	String_t* ___winner_13;
+	String_t* ___winner_15;
 };
 
 // PauseMenu
@@ -11009,9 +11013,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3483[1] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3484[1] = 
 {
 	static_cast<int32_t>(offsetof(mode_t3A1D367C9C9F957BFA83FDC5B610E1A0617043EB_StaticFields, ___gameMode_4)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3485[10] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3485[12] = 
 {
-	static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___scoretext_4)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___maxpunctuation_5)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___m_MyEventscore_6)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___m_MyEventpoints_7)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___tankplayer_8)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objective_9)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objectivemulti1_10)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objectivemulti2_11)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___timerpunctuation_12)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___winner_13)),};
+	static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___scoretext_4)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objectivetext_5)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___timertext_6)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___maxpunctuation_7)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___m_MyEventscore_8)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___m_MyEventpoints_9)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___tankplayer_10)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objective_11)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objectivemulti1_12)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___objectivemulti2_13)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___timerpunctuation_14)),static_cast<int32_t>(offsetof(Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6, ___winner_15)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3486[1] = 
 {
 	static_cast<int32_t>(offsetof(SetActive_tB87BB5B726EB18026D8486B4984B86DD02A87FA8, ___objects_4)),};

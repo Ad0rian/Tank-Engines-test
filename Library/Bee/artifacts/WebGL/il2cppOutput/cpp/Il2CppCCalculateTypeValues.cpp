@@ -41015,24 +41015,28 @@ struct Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6  : public MonoBehavi
 {
 	// UnityEngine.UI.Text Objectives::scoretext
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___scoretext_4;
+	// UnityEngine.UI.Text Objectives::objectivetext
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___objectivetext_5;
+	// UnityEngine.UI.Text Objectives::timertext
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___timertext_6;
 	// System.Int32 Objectives::maxpunctuation
-	int32_t ___maxpunctuation_5;
+	int32_t ___maxpunctuation_7;
 	// UnityEngine.Events.UnityEvent Objectives::m_MyEventscore
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventscore_6;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventscore_8;
 	// UnityEngine.Events.UnityEvent Objectives::m_MyEventpoints
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventpoints_7;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventpoints_9;
 	// System.Int32 Objectives::tankplayer
-	int32_t ___tankplayer_8;
+	int32_t ___tankplayer_10;
 	// System.Int32 Objectives::objective
-	int32_t ___objective_9;
+	int32_t ___objective_11;
 	// System.Int32 Objectives::objectivemulti1
-	int32_t ___objectivemulti1_10;
+	int32_t ___objectivemulti1_12;
 	// System.Int32 Objectives::objectivemulti2
-	int32_t ___objectivemulti2_11;
+	int32_t ___objectivemulti2_13;
 	// System.Single Objectives::timerpunctuation
-	float ___timerpunctuation_12;
+	float ___timerpunctuation_14;
 	// System.String Objectives::winner
-	String_t* ___winner_13;
+	String_t* ___winner_15;
 };
 
 // PauseMenu

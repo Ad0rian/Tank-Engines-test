@@ -1070,24 +1070,28 @@ struct Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6  : public MonoBehavi
 {
 	// UnityEngine.UI.Text Objectives::scoretext
 	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___scoretext_4;
+	// UnityEngine.UI.Text Objectives::objectivetext
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___objectivetext_5;
+	// UnityEngine.UI.Text Objectives::timertext
+	Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* ___timertext_6;
 	// System.Int32 Objectives::maxpunctuation
-	int32_t ___maxpunctuation_5;
+	int32_t ___maxpunctuation_7;
 	// UnityEngine.Events.UnityEvent Objectives::m_MyEventscore
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventscore_6;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventscore_8;
 	// UnityEngine.Events.UnityEvent Objectives::m_MyEventpoints
-	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventpoints_7;
+	UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* ___m_MyEventpoints_9;
 	// System.Int32 Objectives::tankplayer
-	int32_t ___tankplayer_8;
+	int32_t ___tankplayer_10;
 	// System.Int32 Objectives::objective
-	int32_t ___objective_9;
+	int32_t ___objective_11;
 	// System.Int32 Objectives::objectivemulti1
-	int32_t ___objectivemulti1_10;
+	int32_t ___objectivemulti1_12;
 	// System.Int32 Objectives::objectivemulti2
-	int32_t ___objectivemulti2_11;
+	int32_t ___objectivemulti2_13;
 	// System.Single Objectives::timerpunctuation
-	float ___timerpunctuation_12;
+	float ___timerpunctuation_14;
 	// System.String Objectives::winner
-	String_t* ___winner_13;
+	String_t* ___winner_15;
 };
 
 // PauseMenu
@@ -2286,14 +2290,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Object_op_Equality_mB6120F782D83091EF56A
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float Input_GetAxisRaw_m47C0CF8E090561A2F407A4E11D5F2A45044EB8E4 (String_t* ___0_axisName, const RuntimeMethod* method) ;
 // System.Void UnityEngine.SceneManagement.SceneManager::LoadScene(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m0957E62F2A0A0243C79394E5B74E8EFA86BE5ED1 (int32_t ___0_sceneBuildIndex, const RuntimeMethod* method) ;
-// System.Void Objectives::EndGame()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_EndGame_mCDC9F7DA5DB1611FEAB452DB4365CD5350093C16 (Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6* __this, const RuntimeMethod* method) ;
-// System.Void Objectives::lifes()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_lifes_mE27A37F8D7E3E76942F2F85CA776E36641B8D5E4 (Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6* __this, const RuntimeMethod* method) ;
 // System.Int32 UnityEngine.Mathf::RoundToInt(System.Single)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline (float ___0_f, const RuntimeMethod* method) ;
 // System.String System.Int32::ToString()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5 (int32_t* __this, const RuntimeMethod* method) ;
+// System.Void Objectives::EndGame()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_EndGame_mCDC9F7DA5DB1611FEAB452DB4365CD5350093C16 (Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6* __this, const RuntimeMethod* method) ;
+// System.Void Objectives::lifes()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_lifes_mE27A37F8D7E3E76942F2F85CA776E36641B8D5E4 (Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6* __this, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GameObject::SetActive(System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___0_value, const RuntimeMethod* method) ;
 // T UnityEngine.GameObject::GetComponent<respawnThings>()
@@ -3499,44 +3503,54 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void mode__ctor_mA83B580F534A850A5E58C3CA7721
 // System.Void Objectives::Update()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_Update_m1876491386F851305E30AEC467C8B48659B7A695 (Objectives_t4A4ADA2273CA4802758983D534A582BBA49DC9C6* __this, const RuntimeMethod* method) 
 {
+	int32_t V_0 = 0;
 	{
 		// timerpunctuation += Time.deltaTime;
-		float L_0 = __this->___timerpunctuation_12;
+		float L_0 = __this->___timerpunctuation_14;
 		float L_1;
 		L_1 = Time_get_deltaTime_mC3195000401F0FD167DD2F948FD2BC58330D0865(NULL);
-		__this->___timerpunctuation_12 = ((float)il2cpp_codegen_add(L_0, L_1));
+		__this->___timerpunctuation_14 = ((float)il2cpp_codegen_add(L_0, L_1));
+		// timertext.text = Mathf.RoundToInt(timerpunctuation).ToString();
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_2 = __this->___timertext_6;
+		float L_3 = __this->___timerpunctuation_14;
+		int32_t L_4;
+		L_4 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(L_3, NULL);
+		V_0 = L_4;
+		String_t* L_5;
+		L_5 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_2, L_5);
 		// if(maxpunctuation <= objective || maxpunctuation <= objectivemulti1 || maxpunctuation <= objectivemulti2)
-		int32_t L_2 = __this->___maxpunctuation_5;
-		int32_t L_3 = __this->___objective_9;
-		if ((((int32_t)L_2) <= ((int32_t)L_3)))
+		int32_t L_6 = __this->___maxpunctuation_7;
+		int32_t L_7 = __this->___objective_11;
+		if ((((int32_t)L_6) <= ((int32_t)L_7)))
 		{
-			goto IL_003c;
+			goto IL_005a;
 		}
 	}
 	{
-		int32_t L_4 = __this->___maxpunctuation_5;
-		int32_t L_5 = __this->___objectivemulti1_10;
-		if ((((int32_t)L_4) <= ((int32_t)L_5)))
+		int32_t L_8 = __this->___maxpunctuation_7;
+		int32_t L_9 = __this->___objectivemulti1_12;
+		if ((((int32_t)L_8) <= ((int32_t)L_9)))
 		{
-			goto IL_003c;
+			goto IL_005a;
 		}
 	}
 	{
-		int32_t L_6 = __this->___maxpunctuation_5;
-		int32_t L_7 = __this->___objectivemulti2_11;
-		if ((((int32_t)L_6) > ((int32_t)L_7)))
+		int32_t L_10 = __this->___maxpunctuation_7;
+		int32_t L_11 = __this->___objectivemulti2_13;
+		if ((((int32_t)L_10) > ((int32_t)L_11)))
 		{
-			goto IL_0042;
+			goto IL_0060;
 		}
 	}
 
-IL_003c:
+IL_005a:
 	{
 		// EndGame();
 		Objectives_EndGame_mCDC9F7DA5DB1611FEAB452DB4365CD5350093C16(__this, NULL);
 	}
 
-IL_0042:
+IL_0060:
 	{
 		// }
 		return;
@@ -3548,7 +3562,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_UpdateObjective_mC240EC6E8D22
 	int32_t V_0 = 0;
 	{
 		// switch(tankplayer)
-		int32_t L_0 = __this->___tankplayer_8;
+		int32_t L_0 = __this->___tankplayer_10;
 		V_0 = L_0;
 		int32_t L_1 = V_0;
 		switch (L_1)
@@ -3559,11 +3573,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_UpdateObjective_mC240EC6E8D22
 			}
 			case 1:
 			{
-				goto IL_003d;
+				goto IL_0053;
 			}
 			case 2:
 			{
-				goto IL_0060;
+				goto IL_008c;
 			}
 		}
 	}
@@ -3574,34 +3588,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_UpdateObjective_mC240EC6E8D22
 IL_001a:
 	{
 		// objective += 1;
-		int32_t L_2 = __this->___objective_9;
-		__this->___objective_9 = ((int32_t)il2cpp_codegen_add(L_2, 1));
+		int32_t L_2 = __this->___objective_11;
+		__this->___objective_11 = ((int32_t)il2cpp_codegen_add(L_2, 1));
+		// objectivetext.text = objective.ToString();
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_3 = __this->___objectivetext_5;
+		int32_t* L_4 = (&__this->___objective_11);
+		String_t* L_5;
+		L_5 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_4, NULL);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_3, L_5);
 		// if(maxpunctuation > objective)lifes();
-		int32_t L_3 = __this->___maxpunctuation_5;
-		int32_t L_4 = __this->___objective_9;
-		if ((((int32_t)L_3) <= ((int32_t)L_4)))
-		{
-			goto IL_0082;
-		}
-	}
-	{
-		// if(maxpunctuation > objective)lifes();
-		Objectives_lifes_mE27A37F8D7E3E76942F2F85CA776E36641B8D5E4(__this, NULL);
-		// break;
-		return;
-	}
-
-IL_003d:
-	{
-		// objectivemulti1 += 1;
-		int32_t L_5 = __this->___objectivemulti1_10;
-		__this->___objectivemulti1_10 = ((int32_t)il2cpp_codegen_add(L_5, 1));
-		// if(maxpunctuation > objectivemulti1)lifes();
-		int32_t L_6 = __this->___maxpunctuation_5;
-		int32_t L_7 = __this->___objectivemulti1_10;
+		int32_t L_6 = __this->___maxpunctuation_7;
+		int32_t L_7 = __this->___objective_11;
 		if ((((int32_t)L_6) <= ((int32_t)L_7)))
 		{
-			goto IL_0082;
+			goto IL_00c4;
+		}
+	}
+	{
+		// if(maxpunctuation > objective)lifes();
+		Objectives_lifes_mE27A37F8D7E3E76942F2F85CA776E36641B8D5E4(__this, NULL);
+		// break;
+		return;
+	}
+
+IL_0053:
+	{
+		// objectivemulti1 += 1;
+		int32_t L_8 = __this->___objectivemulti1_12;
+		__this->___objectivemulti1_12 = ((int32_t)il2cpp_codegen_add(L_8, 1));
+		// objectivetext.text = objectivemulti1.ToString();
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_9 = __this->___objectivetext_5;
+		int32_t* L_10 = (&__this->___objectivemulti1_12);
+		String_t* L_11;
+		L_11 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_10, NULL);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_9, L_11);
+		// if(maxpunctuation > objectivemulti1)lifes();
+		int32_t L_12 = __this->___maxpunctuation_7;
+		int32_t L_13 = __this->___objectivemulti1_12;
+		if ((((int32_t)L_12) <= ((int32_t)L_13)))
+		{
+			goto IL_00c4;
 		}
 	}
 	{
@@ -3611,17 +3637,23 @@ IL_003d:
 		return;
 	}
 
-IL_0060:
+IL_008c:
 	{
 		// objectivemulti2 += 1;
-		int32_t L_8 = __this->___objectivemulti2_11;
-		__this->___objectivemulti2_11 = ((int32_t)il2cpp_codegen_add(L_8, 1));
+		int32_t L_14 = __this->___objectivemulti2_13;
+		__this->___objectivemulti2_13 = ((int32_t)il2cpp_codegen_add(L_14, 1));
+		// objectivetext.text = objectivemulti2.ToString();
+		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_15 = __this->___objectivetext_5;
+		int32_t* L_16 = (&__this->___objectivemulti2_13);
+		String_t* L_17;
+		L_17 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5(L_16, NULL);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_15, L_17);
 		// if(maxpunctuation > objectivemulti2)lifes();
-		int32_t L_9 = __this->___maxpunctuation_5;
-		int32_t L_10 = __this->___objectivemulti2_11;
-		if ((((int32_t)L_9) <= ((int32_t)L_10)))
+		int32_t L_18 = __this->___maxpunctuation_7;
+		int32_t L_19 = __this->___objectivemulti2_13;
+		if ((((int32_t)L_18) <= ((int32_t)L_19)))
 		{
-			goto IL_0082;
+			goto IL_00c4;
 		}
 	}
 	{
@@ -3629,7 +3661,7 @@ IL_0060:
 		Objectives_lifes_mE27A37F8D7E3E76942F2F85CA776E36641B8D5E4(__this, NULL);
 	}
 
-IL_0082:
+IL_00c4:
 	{
 		// }
 		return;
@@ -3642,7 +3674,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_EndGame_mCDC9F7DA5DB1611FEAB4
 	{
 		// scoretext.text = Mathf.RoundToInt(timerpunctuation).ToString();
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_0 = __this->___scoretext_4;
-		float L_1 = __this->___timerpunctuation_12;
+		float L_1 = __this->___timerpunctuation_14;
 		int32_t L_2;
 		L_2 = Mathf_RoundToInt_m60F8B66CF27F1FA75AA219342BD184B75771EB4B_inline(L_1, NULL);
 		V_0 = L_2;
@@ -3650,7 +3682,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_EndGame_mCDC9F7DA5DB1611FEAB4
 		L_3 = Int32_ToString_m030E01C24E294D6762FB0B6F37CB541581F55CA5((&V_0), NULL);
 		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_0, L_3);
 		// m_MyEventscore.Invoke();
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_4 = __this->___m_MyEventscore_6;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_4 = __this->___m_MyEventscore_8;
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_4, NULL);
 		// }
 		return;
@@ -3661,7 +3693,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Objectives_lifes_mE27A37F8D7E3E76942F2F8
 {
 	{
 		// m_MyEventpoints.Invoke();
-		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_MyEventpoints_7;
+		UnityEvent_tDC2C3548799DBC91D1E3F3DE60083A66F4751977* L_0 = __this->___m_MyEventpoints_9;
 		UnityEvent_Invoke_mFBF80D59B03C30C5FE6A06F897D954ACADE061D2(L_0, NULL);
 		// }
 		return;
