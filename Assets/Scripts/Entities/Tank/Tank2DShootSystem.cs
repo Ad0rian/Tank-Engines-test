@@ -147,7 +147,12 @@ public class Tank2DShootSystem : MonoBehaviour
         foreach(GameObject bulletHUD in ammoHUD.ammoTank) {
             animationBullet = bulletHUD.GetComponent<Animator>();
             
-            if (i > currentAmmo) bulletHUD.SetActive(false);
+            if (i > currentAmmo)
+            {
+                animationBullet.SetBool("yesAmmo",true);
+                animationBullet.SetBool("selectedAmmo",false);     
+                bulletHUD.SetActive(false);          
+            }
             else if(i == currentAmmo)
             {
                 animationBullet.SetBool("selectedAmmo",true);

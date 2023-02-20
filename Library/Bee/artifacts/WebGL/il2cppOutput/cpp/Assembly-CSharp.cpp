@@ -4486,7 +4486,7 @@ IL_017a:
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_44 = L_43->___ammoTank_4;
 		V_1 = L_44;
 		V_2 = 0;
-		goto IL_021b;
+		goto IL_023d;
 	}
 
 IL_0194:
@@ -4503,72 +4503,78 @@ IL_0194:
 		L_50 = GameObject_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_mB84A0931B2081CCADE7C5D459B2A8FAA6D3D3BD3(L_49, GameObject_GetComponent_TisAnimator_t8A52E42AE54F76681838FE9E632683EF3952E883_mB84A0931B2081CCADE7C5D459B2A8FAA6D3D3BD3_RuntimeMethod_var);
 		__this->___animationBullet_22 = L_50;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___animationBullet_22), (void*)L_50);
-		// if (i > currentAmmo) bulletHUD.SetActive(false);
+		// if (i > currentAmmo)
 		int32_t L_51 = V_0;
 		int32_t L_52 = __this->___currentAmmo_8;
 		if ((((int32_t)L_51) <= ((int32_t)L_52)))
 		{
-			goto IL_01b6;
+			goto IL_01d8;
 		}
 	}
 	{
-		// if (i > currentAmmo) bulletHUD.SetActive(false);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_53 = V_3;
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_53, (bool)0, NULL);
-		goto IL_0213;
+		// animationBullet.SetBool("yesAmmo",true);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_53 = __this->___animationBullet_22;
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_53, _stringLiteral65DA496F0A005C3E89199A5C0EB7FE1E0C433652, (bool)1, NULL);
+		// animationBullet.SetBool("selectedAmmo",false);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_54 = __this->___animationBullet_22;
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_54, _stringLiteralE2F8AD0FA2E585DD18D33AC7E9CC01954B078584, (bool)0, NULL);
+		// bulletHUD.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_55 = V_3;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_55, (bool)0, NULL);
+		goto IL_0235;
 	}
 
-IL_01b6:
+IL_01d8:
 	{
 		// else if(i == currentAmmo)
-		int32_t L_54 = V_0;
-		int32_t L_55 = __this->___currentAmmo_8;
-		if ((!(((uint32_t)L_54) == ((uint32_t)L_55))))
+		int32_t L_56 = V_0;
+		int32_t L_57 = __this->___currentAmmo_8;
+		if ((!(((uint32_t)L_56) == ((uint32_t)L_57))))
 		{
-			goto IL_01ea;
+			goto IL_020c;
 		}
 	}
 	{
 		// animationBullet.SetBool("selectedAmmo",true);
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_56 = __this->___animationBullet_22;
-		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_56, _stringLiteralE2F8AD0FA2E585DD18D33AC7E9CC01954B078584, (bool)1, NULL);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_58 = __this->___animationBullet_22;
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_58, _stringLiteralE2F8AD0FA2E585DD18D33AC7E9CC01954B078584, (bool)1, NULL);
 		// animationBullet.SetBool("yesAmmo",false);
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_57 = __this->___animationBullet_22;
-		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_57, _stringLiteral65DA496F0A005C3E89199A5C0EB7FE1E0C433652, (bool)0, NULL);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_59 = __this->___animationBullet_22;
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_59, _stringLiteral65DA496F0A005C3E89199A5C0EB7FE1E0C433652, (bool)0, NULL);
 		// bulletHUD.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_58 = V_3;
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_58, (bool)1, NULL);
-		goto IL_0213;
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_60 = V_3;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_60, (bool)1, NULL);
+		goto IL_0235;
 	}
 
-IL_01ea:
+IL_020c:
 	{
 		// animationBullet.SetBool("yesAmmo",true);
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_59 = __this->___animationBullet_22;
-		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_59, _stringLiteral65DA496F0A005C3E89199A5C0EB7FE1E0C433652, (bool)1, NULL);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_61 = __this->___animationBullet_22;
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_61, _stringLiteral65DA496F0A005C3E89199A5C0EB7FE1E0C433652, (bool)1, NULL);
 		// animationBullet.SetBool("selectedAmmo",false);
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_60 = __this->___animationBullet_22;
-		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_60, _stringLiteralE2F8AD0FA2E585DD18D33AC7E9CC01954B078584, (bool)0, NULL);
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_62 = __this->___animationBullet_22;
+		Animator_SetBool_m6F8D4FAF0770CD4EC1F54406249785DE7391E42B(L_62, _stringLiteralE2F8AD0FA2E585DD18D33AC7E9CC01954B078584, (bool)0, NULL);
 		// bulletHUD.SetActive(true);
-		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_61 = V_3;
-		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_61, (bool)1, NULL);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_63 = V_3;
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_63, (bool)1, NULL);
 	}
 
-IL_0213:
+IL_0235:
 	{
 		// i--;
-		int32_t L_62 = V_0;
-		V_0 = ((int32_t)il2cpp_codegen_subtract(L_62, 1));
-		int32_t L_63 = V_2;
-		V_2 = ((int32_t)il2cpp_codegen_add(L_63, 1));
+		int32_t L_64 = V_0;
+		V_0 = ((int32_t)il2cpp_codegen_subtract(L_64, 1));
+		int32_t L_65 = V_2;
+		V_2 = ((int32_t)il2cpp_codegen_add(L_65, 1));
 	}
 
-IL_021b:
+IL_023d:
 	{
 		// foreach(GameObject bulletHUD in ammoHUD.ammoTank) {
-		int32_t L_64 = V_2;
-		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_65 = V_1;
-		if ((((int32_t)L_64) < ((int32_t)((int32_t)(((RuntimeArray*)L_65)->max_length)))))
+		int32_t L_66 = V_2;
+		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_67 = V_1;
+		if ((((int32_t)L_66) < ((int32_t)((int32_t)(((RuntimeArray*)L_67)->max_length)))))
 		{
 			goto IL_0194;
 		}

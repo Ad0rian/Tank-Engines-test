@@ -60,6 +60,7 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnimatorStateTransitionInspector
     - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
@@ -508,19 +509,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3476}
     - Class: 114
-      Script: {instanceID: 4772}
+      Script: {instanceID: 4768}
     - Class: 114
-      Script: {instanceID: 4808}
+      Script: {instanceID: 4804}
     - Class: 114
-      Script: {instanceID: 6738}
+      Script: {instanceID: 6734}
     - Class: 114
-      Script: {instanceID: 7336}
+      Script: {instanceID: 7332}
     - Class: 114
-      Script: {instanceID: 7364}
+      Script: {instanceID: 7360}
     - Class: 114
-      Script: {instanceID: 7628}
+      Script: {instanceID: 7624}
     - Class: 114
-      Script: {instanceID: 8262}
+      Script: {instanceID: 8258}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -593,59 +594,59 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2954}
     - Class: 114
-      Script: {instanceID: 4000}
+      Script: {instanceID: 3996}
     - Class: 114
-      Script: {instanceID: 4114}
+      Script: {instanceID: 4110}
     - Class: 114
-      Script: {instanceID: 4328}
+      Script: {instanceID: 4324}
     - Class: 114
-      Script: {instanceID: 4470}
+      Script: {instanceID: 4466}
     - Class: 114
-      Script: {instanceID: 4686}
+      Script: {instanceID: 4682}
     - Class: 114
-      Script: {instanceID: 4772}
+      Script: {instanceID: 4768}
     - Class: 114
-      Script: {instanceID: 4808}
+      Script: {instanceID: 4804}
     - Class: 114
-      Script: {instanceID: 4820}
+      Script: {instanceID: 4816}
     - Class: 114
-      Script: {instanceID: 4940}
+      Script: {instanceID: 4936}
     - Class: 114
-      Script: {instanceID: 4990}
+      Script: {instanceID: 4986}
     - Class: 114
-      Script: {instanceID: 5574}
+      Script: {instanceID: 5570}
     - Class: 114
-      Script: {instanceID: 5928}
+      Script: {instanceID: 5924}
     - Class: 114
-      Script: {instanceID: 6510}
+      Script: {instanceID: 6506}
     - Class: 114
-      Script: {instanceID: 6698}
+      Script: {instanceID: 6694}
     - Class: 114
-      Script: {instanceID: 6712}
+      Script: {instanceID: 6708}
     - Class: 114
-      Script: {instanceID: 6738}
+      Script: {instanceID: 6734}
     - Class: 114
-      Script: {instanceID: 6884}
+      Script: {instanceID: 6880}
     - Class: 114
-      Script: {instanceID: 7364}
+      Script: {instanceID: 7360}
     - Class: 114
-      Script: {instanceID: 7624}
+      Script: {instanceID: 7620}
     - Class: 114
-      Script: {instanceID: 7672}
+      Script: {instanceID: 7668}
     - Class: 114
-      Script: {instanceID: 7786}
+      Script: {instanceID: 7782}
     - Class: 114
-      Script: {instanceID: 7946}
+      Script: {instanceID: 7942}
     - Class: 114
-      Script: {instanceID: 8048}
+      Script: {instanceID: 8044}
     - Class: 114
-      Script: {instanceID: 8696}
+      Script: {instanceID: 8686}
     - Class: 114
-      Script: {instanceID: 9470}
+      Script: {instanceID: 9460}
     - Class: 114
-      Script: {instanceID: 9678}
+      Script: {instanceID: 9668}
     - Class: 114
-      Script: {instanceID: 9700}
+      Script: {instanceID: 9690}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -2097,4 +2098,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/Main Menu.unity
   - Assets/Scenes/PlayableMap.unity
-  playerPath: D:/Users/adrij/The QTG Done
+  playerPath: D:/Users/adrij/done2
