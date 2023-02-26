@@ -3,7 +3,19 @@ guid: 55877163bfdc52245bc9c33f6dc4ede1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bulletObject: {fileID: 6828717364664343339, guid: bcc4c141d087ccb4294ed15bf0ba020f, type: 3}
+  - firePoint: {instanceID: 0}
+  - ammoHUD: {instanceID: 0}
+  - shieldHUD: {instanceID: 0}
+  - speedHUD: {instanceID: 0}
+  - Cannon: {instanceID: 0}
+  - ShieldAbility: {instanceID: 0}
+  - SpeedAbilityHUD: {instanceID: 0}
+  - tank2DMovement: {instanceID: 0}
+  - SpeedAbilitytimer: {instanceID: 0}
+  - EffectOnomatopoeiaShoot: {instanceID: 0}
+  - EffectOnomatopoeiaShield: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

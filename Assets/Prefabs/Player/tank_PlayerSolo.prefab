@@ -287,7 +287,6 @@ GameObject:
   m_Component:
   - component: {fileID: 6945776704076183655}
   - component: {fileID: 6945776704076183652}
-  - component: {fileID: 6945776704076183654}
   - component: {fileID: 6945776704076183653}
   - component: {fileID: 6945776704076183658}
   - component: {fileID: 6945776704076183659}
@@ -336,22 +335,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &6945776704076183654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6945776704076183656}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a040719b71b492c40b5499d90da6dbcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameEffect: Dash
-  fillerelement: {fileID: 0}
-  placeapparition: {fileID: 6945776704076183656}
-  startOnLoad: 0
 --- !u!114 &6945776704076183653
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,7 +347,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ae1f3062115c447a14d0ba77f2667c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  EffectOnomatopoeiaSpeed: {fileID: 6945776704076183654}
+  EffectOnomatopoeiaSpeed: {fileID: 0}
   MouseAim: 1
   cannonRotor: {fileID: 6945776704473425162}
   forwardSpeed: 10

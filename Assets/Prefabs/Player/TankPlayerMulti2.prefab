@@ -731,7 +731,6 @@ GameObject:
   - component: {fileID: 6377196217318776451}
   - component: {fileID: 6377196217318776448}
   - component: {fileID: 6377196217318776454}
-  - component: {fileID: 6377196217318776457}
   - component: {fileID: 6377196217318776456}
   m_Layer: 0
   m_Name: TankPlayerMulti2
@@ -864,22 +863,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameEffect: Hit
-  fillerelement: {fileID: 0}
-  placeapparition: {fileID: 6377196217318776478}
-  startOnLoad: 0
---- !u!114 &6377196217318776457
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6377196217318776478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a040719b71b492c40b5499d90da6dbcc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NameEffect: Dash
   fillerelement: {fileID: 0}
   placeapparition: {fileID: 6377196217318776478}
   startOnLoad: 0

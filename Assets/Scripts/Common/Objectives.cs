@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+namespace ObjectiveScene
+{
+
 public class Objectives : MonoBehaviour
 {
     public Text scoretext;
@@ -47,8 +50,6 @@ public class Objectives : MonoBehaviour
             objectivetext.text = objectivemulti2.ToString();
             if(maxpunctuation > objectivemulti2)lifes();
             break;
-
-
         }
         
         
@@ -66,4 +67,5 @@ public class Objectives : MonoBehaviour
     {
         m_MyEventpoints.Invoke();
     }
+}
 }

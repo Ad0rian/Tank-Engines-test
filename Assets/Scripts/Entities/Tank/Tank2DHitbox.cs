@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Tank2DControllers;
 
 public class Tank2DHitbox : MonoBehaviour
 {

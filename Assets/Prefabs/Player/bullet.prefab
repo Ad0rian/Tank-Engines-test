@@ -228,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   NameEffect: Boom
-  fillerelement: {fileID: 0}
+  fillerelement: {fileID: 5670064711739757574, guid: 264e13ace2cf9ac4ca2a6428cef3fd0f, type: 3}
   placeapparition: {fileID: 6828717364664343339}
   startOnLoad: 0
 --- !u!95 &6828717364664343349
