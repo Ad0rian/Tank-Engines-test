@@ -11,15 +11,34 @@ public class Objectives : MonoBehaviour
     public Text scoretext;
     public Text objectivetext;
     public Text timertext;
+    private bool ready = true;
     public int maxpunctuation;
+    public int typeObjective;
     public UnityEngine.Events.UnityEvent m_MyEventscore;
     public UnityEngine.Events.UnityEvent m_MyEventpoints;
     public int tankplayer;
     int objective = 0, objectivemulti1= 0, objectivemulti2 =0; 
     private float timerpunctuation;
     private string winner;
+
     void Update()
     {
+        if(ready)
+        {
+            timertext = GameObject.FindWithTag("timerScore").GetComponent<Text>();
+            
+            switch(typeObjective)
+            {
+                case 0:
+                    objectivetext = GameObject.Find("CactiScore").GetComponent<Text>();
+                    break;
+                case 1:
+                    objectivetext = GameObject.Find("CactiScore").GetComponent<Text>();
+                    break;
+            }
+            ready = false;
+        }
+
         timerpunctuation += Time.deltaTime;
         timertext.text = Mathf.RoundToInt(timerpunctuation).ToString();
         if(maxpunctuation <= objective || maxpunctuation <= objectivemulti1 || maxpunctuation <= objectivemulti2)

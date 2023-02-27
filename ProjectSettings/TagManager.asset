@@ -14,6 +14,14 @@ TagManager:
   - cactipoint
   - tankpoint
   - tankpointboy
+  - entitylocation
+  - objectivesolo
+  - objectivemulti
+  - ammospawn
+  - shieldspawn
+  - speedspawn
+  - scoreSolo
+  - scoreMulti
   layers:
   - Default
   - TransparentFX

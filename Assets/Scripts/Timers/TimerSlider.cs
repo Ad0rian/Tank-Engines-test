@@ -16,15 +16,16 @@ public class TimerSlider : MonoBehaviour
         RestartTimer();
    }
 
-    void Update(){
+    void Update()
+    {
  
-   counterTime -= Time.deltaTime;
-   timerSlider.value = counterTime;
-   
-   if (counterTime <= 0.0f)
-   {
-      timerEnded();
-   }
+      counterTime -= Time.deltaTime;
+      timerSlider.value = counterTime;
+      
+      if (counterTime <= 0.0f)
+      {
+         timerEnded();
+      }
    
    }
    

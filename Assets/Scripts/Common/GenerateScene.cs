@@ -27,7 +27,7 @@ public class GenerateScene : MonoBehaviour
     public GameObject scoreM;
     public GameObject animationIntroS;
     public GameObject animationIntroM;
-
+    
     public UnityEngine.Events.UnityEvent m_MyEventsolo;
     public UnityEngine.Events.UnityEvent m_MyEventmulti;
 
@@ -42,16 +42,6 @@ public class GenerateScene : MonoBehaviour
 
             var tank = Instantiate(myTankP1, new Vector3(-34, -8, 0), Quaternion.identity);
                 
-            var entities = Instantiate(Enemies, new Vector3(-20, 12, 0), Quaternion.identity);
-
-            var cameraS = Instantiate(cameraPlayer1, new Vector3(-20, 12, 0), Quaternion.identity);
-
-                cameraS.GetComponent<CinemachineVirtualCamera>().m_Follow = tank.transform;
-
-            var objective = Instantiate(objectiveS, new Vector3(0, 0, 0), Quaternion.identity);
-
-            var anim = Instantiate(animationIntroS, new Vector3(0, 0, 0), Quaternion.identity);
-
                 tank.GetComponent<Tank2DMovement>().ShootInput = "Shoot";
                 tank.GetComponent<Tank2DMovement>().ShieldInput = "Shield";
                 tank.GetComponent<Tank2DMovement>().keyboardHorizontalInput = "Horizontal";
@@ -67,8 +57,21 @@ public class GenerateScene : MonoBehaviour
                 tank.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP1.GetComponentInChildren<SpeedHUD>();
                 tank.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP1.gameObject.transform.GetChild(3).gameObject;
                 tank.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
-                
-                HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tank.GetComponentInChildren<Tank2DShootSystem>();
+                HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tank.GetComponentInChildren<Tank2DShootSystem>();           
+
+            var entities = Instantiate(Enemies, new Vector3(-20, 12, 0), Quaternion.identity);
+
+            var cameraS = Instantiate(cameraPlayer1, new Vector3(-20, 12, 0), Quaternion.identity);
+
+                cameraS.GetComponent<CinemachineVirtualCamera>().m_Follow = tank.transform;
+
+            var objective = Instantiate(objectiveS, new Vector3(0, 0, 0), Quaternion.identity);
+
+            var scoreSolo = Instantiate(scoreS, new Vector3(0, 0, 0), Quaternion.identity);
+
+            var anim = Instantiate(animationIntroS, new Vector3(0, 0, 0), Quaternion.identity);
+
+
 
 
             break;
@@ -93,7 +96,6 @@ public class GenerateScene : MonoBehaviour
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP1.GetComponentInChildren<SpeedHUD>();
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP1.gameObject.transform.GetChild(3).gameObject;
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
-                
                 HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tankm1.GetComponentInChildren<Tank2DShootSystem>();
             
             var tankm2 = Instantiate(myTankP2, new Vector3(30, -2, 0), Quaternion.identity);
@@ -113,8 +115,7 @@ public class GenerateScene : MonoBehaviour
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().shieldHUD = HUDP2.GetComponentInChildren<ShieldHUD>();
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP2.GetComponentInChildren<SpeedHUD>();
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP2.gameObject.transform.GetChild(3).gameObject;
-                tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP2.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
-                
+                tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP2.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();       
                 HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tankm2.GetComponentInChildren<Tank2DShootSystem>();
                 
                 
@@ -124,6 +125,8 @@ public class GenerateScene : MonoBehaviour
                 cameraM.GetComponentInChildren<CinemachineTargetGroup>().m_Targets[1].target = tankm2.transform;
 
             var objectivem = Instantiate(objectiveM, new Vector3(0, 0, 0), Quaternion.identity);
+
+            var scoreMulti = Instantiate(scoreM, new Vector3(0, 0, 0), Quaternion.identity);
 
             var animM = Instantiate(animationIntroM, new Vector3(0, 0, 0), Quaternion.identity);
 

@@ -6,7 +6,9 @@ public class SimpleTimer : MonoBehaviour
 {
     public UnityEngine.Events.UnityEvent m_MyEvent;
     public float targetTime;
-    public bool deactivateobject = true;
+    public bool deactivateObject = true;
+    public bool startertime = true;
+    public bool destroyObject = false;
     private float counterTime;
 
     private void Start()
@@ -14,14 +16,15 @@ public class SimpleTimer : MonoBehaviour
       counterTime= targetTime;
    }
 
-    void Update(){
- 
-   counterTime -= Time.deltaTime;
-   
-   if (counterTime <= 0.0f)
+   void Update()
    {
-      timerEnded();
-   }
+ 
+      if (startertime)counterTime -= Time.deltaTime;
+      
+      if (counterTime <= 0.0f)
+      {
+         timerEnded();
+      }
    
    }
    
@@ -29,7 +32,8 @@ public class SimpleTimer : MonoBehaviour
    {
       counterTime= targetTime;
       m_MyEvent.Invoke();
-      if (deactivateobject)gameObject.SetActive(false);
+      if (deactivateObject)gameObject.SetActive(false);
+      if (destroyObject)Destroy(gameObject);
    }
 
    }
