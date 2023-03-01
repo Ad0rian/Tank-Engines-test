@@ -8,10 +8,10 @@ namespace ObjectiveScene
 
 public class Objectives : MonoBehaviour
 {
-    public Text scoretext;
+    public GameObject score;
     public Text objectivetext;
     public Text timertext;
-    private bool ready = true;
+    public Animator transition;
     public int maxpunctuation;
     public int typeObjective;
     public UnityEngine.Events.UnityEvent m_MyEventscore;
@@ -23,28 +23,13 @@ public class Objectives : MonoBehaviour
 
     void Update()
     {
-        if(ready)
-        {
-            timertext = GameObject.FindWithTag("timerScore").GetComponent<Text>();
-            
-            switch(typeObjective)
+            timerpunctuation += Time.deltaTime;
+            timertext.text = Mathf.RoundToInt(timerpunctuation).ToString();
+            if(maxpunctuation <= objective || maxpunctuation <= objectivemulti1 || maxpunctuation <= objectivemulti2)
             {
-                case 0:
-                    objectivetext = GameObject.Find("CactiScore").GetComponent<Text>();
-                    break;
-                case 1:
-                    objectivetext = GameObject.Find("CactiScore").GetComponent<Text>();
-                    break;
+                EndGame();
             }
-            ready = false;
-        }
-
-        timerpunctuation += Time.deltaTime;
-        timertext.text = Mathf.RoundToInt(timerpunctuation).ToString();
-        if(maxpunctuation <= objective || maxpunctuation <= objectivemulti1 || maxpunctuation <= objectivemulti2)
-        {
-            EndGame();
-        }
+        
     }
 
     public void UpdateObjective()
@@ -78,7 +63,9 @@ public class Objectives : MonoBehaviour
 
     public void EndGame()
     {  
-        scoretext.text = Mathf.RoundToInt(timerpunctuation).ToString();
+        score.GetComponentInChildren<Text>().text = Mathf.RoundToInt(timerpunctuation).ToString();
+        transition.Play("closedTransition");
+        score.SetActive(true);
         m_MyEventscore.Invoke();
     }
 

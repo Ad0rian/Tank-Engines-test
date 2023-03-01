@@ -22,6 +22,8 @@ TagManager:
   - speedspawn
   - scoreSolo
   - scoreMulti
+  - timerScore
+  - timerTrueScore
   layers:
   - Default
   - TransparentFX

@@ -282,7 +282,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   targetTime: 0.3
-  deactivateobject: 0
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
 --- !u!1 &4025631528012744296
 GameObject:
   m_ObjectHideFlags: 0
@@ -648,7 +650,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   targetTime: 1.5
-  deactivateobject: 1
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
 --- !u!1 &4025631528529298995
 GameObject:
   m_ObjectHideFlags: 0

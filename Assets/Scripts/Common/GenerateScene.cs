@@ -4,29 +4,18 @@ using UnityEngine;
 using Cinemachine;
 using UnityEngine.UI;
 using Tank2DControllers;
-
+using ObjectiveScene;
 
 namespace GenerateScene
 {
 
 public class GenerateScene : MonoBehaviour
 {   
-    public GameObject myTankP1;
-    public GameObject myTankP2;
-    public GameObject Enemies;
+    public GameObject myTankP1, Enemies, cameraPlayer1, HUDP1, objectiveS , objectiveSHUD, scoreS, animationIntroS ;
+    public GameObject myTankP2, cameraPlayer2, HUDP2, objectiveM, objectiveMHUD, scoreM, animationIntroM ;
+    public GameObject timerTime;
     public Camera MainCamera;
-    public GameObject cameraPlayer1;
-    public GameObject cameraPlayer2;
-    public GameObject HUDP1;
-    public GameObject HUDP2;
-    public GameObject objectiveS;
-    public GameObject objectiveM;
-    public GameObject objectiveSHUD;
-    public GameObject objectiveMHUD;
-    public GameObject scoreS;
-    public GameObject scoreM;
-    public GameObject animationIntroS;
-    public GameObject animationIntroM;
+
     
     public UnityEngine.Events.UnityEvent m_MyEventsolo;
     public UnityEngine.Events.UnityEvent m_MyEventmulti;
@@ -71,7 +60,11 @@ public class GenerateScene : MonoBehaviour
 
             var anim = Instantiate(animationIntroS, new Vector3(0, 0, 0), Quaternion.identity);
 
-
+                
+                objective.GetComponent<Objectives>().timertext = timerTime.GetComponentInChildren<Text>();
+                objective.GetComponent<Objectives>().transition = GameObject.Find("CanvasTransition").GetComponent<Animator>();
+                objective.GetComponent<Objectives>().score = scoreSolo;
+                objective.GetComponent<Objectives>().objectivetext = objectiveSHUD.GetComponentInChildren<Text>();
 
 
             break;
@@ -129,6 +122,11 @@ public class GenerateScene : MonoBehaviour
             var scoreMulti = Instantiate(scoreM, new Vector3(0, 0, 0), Quaternion.identity);
 
             var animM = Instantiate(animationIntroM, new Vector3(0, 0, 0), Quaternion.identity);
+                
+                objectivem.GetComponent<Objectives>().timertext = timerTime.GetComponentInChildren<Text>();
+                objectivem.GetComponent<Objectives>().transition = GameObject.Find("CanvasTransition").GetComponent<Animator>();
+                objectivem.GetComponent<Objectives>().score = scoreMulti;
+                objectivem.GetComponent<Objectives>().objectivetext = objectiveSHUD.GetComponentInChildren<Text>();
 
 
 
@@ -142,6 +140,7 @@ public class GenerateScene : MonoBehaviour
     {
         
     }
+
 }
 
 }
