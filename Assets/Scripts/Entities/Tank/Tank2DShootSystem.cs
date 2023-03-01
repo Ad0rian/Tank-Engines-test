@@ -149,8 +149,8 @@ public class Tank2DShootSystem : MonoBehaviour
             
             if (i > currentAmmo)
             {
-                animationBullet.SetBool("yesAmmo",true);
-                animationBullet.SetBool("selectedAmmo",false);     
+                //animationBullet.SetBool("yesAmmo",true);
+                //animationBullet.SetBool("selectedAmmo",false);     
                 bulletHUD.SetActive(false);          
             }
             else if(i == currentAmmo)

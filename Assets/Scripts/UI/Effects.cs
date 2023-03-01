@@ -18,7 +18,7 @@ public class Effects : MonoBehaviour
     public void InstantiateEffect()
     {
         var instance = Instantiate(fillerelement, placeapparition.transform.position, Quaternion.identity);
-        instance.GetComponent<TimerDestroyer>().startertime = true;
+        instance.GetComponent<SimpleTimer>().startertime = true;
         instance.GetComponent<Animator>().SetTrigger(NameEffect);
     }
 }

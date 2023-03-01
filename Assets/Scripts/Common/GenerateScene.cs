@@ -15,6 +15,7 @@ public class GenerateScene : MonoBehaviour
     public GameObject myTankP2, cameraPlayer2, HUDP2, objectiveM, objectiveMHUD, scoreM, animationIntroM ;
     public GameObject timerTime;
     public Camera MainCamera;
+    GameObject tank, tankm1, tankm2;
 
     
     public UnityEngine.Events.UnityEvent m_MyEventsolo;
@@ -29,7 +30,7 @@ public class GenerateScene : MonoBehaviour
             case 0:
             m_MyEventsolo.Invoke();
 
-            var tank = Instantiate(myTankP1, new Vector3(-34, -8, 0), Quaternion.identity);
+            tank = Instantiate(myTankP1, new Vector3(-34, -8, 0), Quaternion.identity);
                 
                 tank.GetComponent<Tank2DMovement>().ShootInput = "Shoot";
                 tank.GetComponent<Tank2DMovement>().ShieldInput = "Shield";
@@ -72,7 +73,7 @@ public class GenerateScene : MonoBehaviour
             case 1:
             m_MyEventmulti.Invoke();
 
-            var tankm1 = Instantiate(myTankP1, new Vector3(-62, 17, 0), Quaternion.identity);
+            tankm1 = Instantiate(myTankP1, new Vector3(-62, 17, 0), Quaternion.identity);
 
                 tankm1.GetComponent<Tank2DMovement>().ShootInput = "ShootS";
                 tankm1.GetComponent<Tank2DMovement>().ShieldInput = "ShieldS";
@@ -91,7 +92,7 @@ public class GenerateScene : MonoBehaviour
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
                 HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tankm1.GetComponentInChildren<Tank2DShootSystem>();
             
-            var tankm2 = Instantiate(myTankP2, new Vector3(30, -2, 0), Quaternion.identity);
+            tankm2 = Instantiate(myTankP2, new Vector3(30, -2, 0), Quaternion.identity);
             
                 tankm2.GetComponent<Tank2DMovement>().ShootInput = "ShootK";
                 tankm2.GetComponent<Tank2DMovement>().ShieldInput = "ShieldK";
@@ -139,6 +140,21 @@ public class GenerateScene : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void startgame()
+    {
+        switch(mode.gameMode)
+        {
+            case 0:
+                    tank.SetActive(true);
+            break;
+
+            case 1:
+                    tankm1.SetActive(true);
+                    tankm2.SetActive(true);
+            break;
+        }
     }
 
 }

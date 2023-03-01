@@ -7,32 +7,13 @@ public class mainMenuInput : MonoBehaviour
 {
 
 
-    public Animator UITank;
-    public Animator BGTank;
-    public GameObject ButtonSolo;
-    public GameObject ButtonMulti;
-    public GameObject ButtonExit;
-    public Animator PressedSolo;
-    public Animator PressedMulti;
-    public Animator PressedExit;
-
-
-    public GameObject selectedButton;
-    private bool solo;
-    private bool multi;
-    private bool exit;
-    private bool soloBG;
-    private bool multiBG;
-    private bool exitBG;
-    private bool pressedactionsolo;
-    private bool pressedactionmulti;
-    private bool pressedactionexit;
+    public Animator UITank, BGTank,PressedSolo ,PressedMulti ,PressedExit ;
+    public GameObject ButtonSolo, ButtonMulti, ButtonExit, selectedButton;
+    private bool solo, multi, exit, soloBG, multiBG, exitBG, pressedactionsolo, pressedactionmulti, pressedactionexit;
 
     public void Start()
     {
         EventSystem.current.SetSelectedGameObject(selectedButton);
-        //Cursor.lockState = CursorLockMode.Locked; 
-        //Cursor.visible = false;
     }
 
      void FixedUpdate()
@@ -64,8 +45,6 @@ public class mainMenuInput : MonoBehaviour
             pressedactionsolo = true;
             pressedactionmulti = false;
             pressedactionexit = false;
-            
-           // Debug.Log("solo");
         }
         if (EventSystem.current.currentSelectedGameObject == ButtonMulti)
         {
@@ -78,8 +57,6 @@ public class mainMenuInput : MonoBehaviour
             pressedactionsolo = false;
             pressedactionmulti = true;
             pressedactionexit = false;
-            
-           // Debug.Log("multi");
         }
         if (EventSystem.current.currentSelectedGameObject == ButtonExit)
         {
@@ -93,9 +70,7 @@ public class mainMenuInput : MonoBehaviour
             pressedactionsolo = false;
             pressedactionmulti = false;
             pressedactionexit = true;
-           // Debug.Log("exit");
         }
-
 
 }
 }
