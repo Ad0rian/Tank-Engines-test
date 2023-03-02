@@ -84,7 +84,7 @@ GameObject:
   - component: {fileID: 6880141097532916703}
   - component: {fileID: 8274045545417756391}
   - component: {fileID: 7076968335022716274}
-  - component: {fileID: 1769350432584500408}
+  - component: {fileID: 3073237871134944474}
   - component: {fileID: 5895774468615710130}
   m_Layer: 0
   m_Name: Cacti
@@ -231,7 +231,7 @@ MonoBehaviour:
   fillerelement: {fileID: 5670064711739757574, guid: 4ea6119f144e4014d90b9dbc74564dca, type: 3}
   placeapparition: {fileID: 6880141097412302327}
   startOnLoad: 0
---- !u!114 &1769350432584500408
+--- !u!114 &3073237871134944474
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -240,10 +240,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 6880141097532916696}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f6fb524812e075543a907303b08541fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 7c86f2955f30d9b4fa13800612597861, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   tagCollide: Bullet
+  tagRespawn: entitylocation
   En_MyEvent:
     m_PersistentCalls:
       m_Calls:

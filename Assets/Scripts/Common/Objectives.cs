@@ -10,6 +10,7 @@ public class Objectives : MonoBehaviour
 {
     public GameObject score;
     public Text objectivetext;
+    public Text objectivetextp2;
     public Text timertext;
     public Animator transition;
     public int maxpunctuation;
@@ -17,7 +18,7 @@ public class Objectives : MonoBehaviour
     public UnityEngine.Events.UnityEvent m_MyEventscore;
     public UnityEngine.Events.UnityEvent m_MyEventpoints;
     public int tankplayer;
-    int objective = 0, objectivemulti1= 0, objectivemulti2 =0; 
+    int objective = 0, objectivemulti =0; 
     private float timerpunctuation;
     private string winner;
 
@@ -25,16 +26,16 @@ public class Objectives : MonoBehaviour
     {
             timerpunctuation += Time.deltaTime;
             timertext.text = Mathf.RoundToInt(timerpunctuation).ToString();
-            if(maxpunctuation <= objective || maxpunctuation <= objectivemulti1 || maxpunctuation <= objectivemulti2)
+            if(maxpunctuation <= objective || maxpunctuation <= objectivemulti)
             {
                 EndGame();
             }
         
     }
 
-    public void UpdateObjective()
+    public void UpdateObjective(int playerupdate)
     {
-
+        tankplayer = playerupdate;
         switch(tankplayer)
         {
             case 0:
@@ -44,15 +45,9 @@ public class Objectives : MonoBehaviour
             break;
 
             case 1:
-            objectivemulti1 += 1;
-            objectivetext.text = objectivemulti1.ToString();
-            if(maxpunctuation > objectivemulti1)lifes();
-            break;
-
-            case 2:
-            objectivemulti2 += 1;
-            objectivetext.text = objectivemulti2.ToString();
-            if(maxpunctuation > objectivemulti2)lifes();
+            objectivemulti += 1;
+            objectivetextp2.text = objectivemulti.ToString();
+            if(maxpunctuation > objectivemulti)lifes();
             break;
         }
         
@@ -71,6 +66,20 @@ public class Objectives : MonoBehaviour
 
     public void lifes()
     {
+
+        if (typeObjective == 1)
+        {
+            switch(tankplayer)
+            {
+                case 0:
+
+                break;
+
+                case 1:
+                
+                break;
+            }
+        }
         m_MyEventpoints.Invoke();
     }
 }

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using ObjectiveScene;
 using FillerpositionSpawn;
 
 public class Fill : MonoBehaviour
@@ -32,30 +31,24 @@ public class Fill : MonoBehaviour
         Tank2DShootSystem weapon = collision.gameObject.GetComponentInChildren<Tank2DShootSystem>();
         if (weapon)
         {
-
+            AbilitySpawn.RecolocateElement();
             switch(typeAbility)
             {
                 case 0:
-                    AbilitySpawn.RecolocateElement();
-                    weapon.AddAmmo(ammoAmount);
-                    m_MyEvent.Invoke();
-                    Destroy(gameObject);
+                    weapon.AddAmmo(ammoAmount);                 
                     break;
 
                 case 1:
-                    AbilitySpawn.RecolocateElement();
                     weapon.AddShield();
-                    m_MyEvent.Invoke();
-                    Destroy(gameObject);
                     break;
 
-                case 2:
-                    AbilitySpawn.RecolocateElement();
+                case 2:                    
                     weapon.AddSpeed();
-                    m_MyEvent.Invoke();
-                    Destroy(gameObject);
                     break;
             }
+            
+            m_MyEvent.Invoke();
+            Destroy(gameObject);
 
         }
     }

@@ -323,7 +323,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2343207430150065392}
   - component: {fileID: 2343207430150065398}
-  - component: {fileID: 2343207430150065399}
+  - component: {fileID: 3749517861037050170}
   m_Layer: 5
   m_Name: exitgame
   m_TagString: Untagged
@@ -366,8 +366,8 @@ MonoBehaviour:
   m_MyEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2343207430150065399}
-        m_TargetAssemblyTypeName: ExitGame, Assembly-CSharp
+      - m_Target: {fileID: 3749517861037050170}
+        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
         m_MethodName: QuitTheGame
         m_Mode: 1
         m_Arguments:
@@ -376,11 +376,13 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   targetTime: 1
-  deactivateobject: 1
---- !u!114 &2343207430150065399
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
+--- !u!114 &3749517861037050170
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -389,9 +391,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2343207430150065393}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe10082113f0410498a1ad273f19660a, type: 3}
+  m_Script: {fileID: 11500000, guid: bc197ea0b00d150439862d8ecf131069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  scenetoLoad: 0
 --- !u!1 &2343207430357066205
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,12 +886,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UITank: {fileID: 2343207430889415387}
   BGTank: {fileID: 0}
-  ButtonSolo: {fileID: 2343207430387218061}
-  ButtonMulti: {fileID: 2343207429862857981}
-  ButtonExit: {fileID: 2343207430357066205}
   PressedSolo: {fileID: 2343207430387218048}
   PressedMulti: {fileID: 2343207429862857968}
   PressedExit: {fileID: 2343207430357066192}
+  ButtonSolo: {fileID: 2343207430387218061}
+  ButtonMulti: {fileID: 2343207429862857981}
+  ButtonExit: {fileID: 2343207430357066205}
   selectedButton: {fileID: 2343207430387218061}
 --- !u!1 &2343207430897251191
 GameObject:
@@ -945,18 +948,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2343207430897251189}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: LoadGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: gameMode, Assembly-CSharp
         m_MethodName: MultiMode
         m_Mode: 1
         m_Arguments:
@@ -968,7 +959,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   targetTime: 1
-  deactivateobject: 1
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
 --- !u!114 &2343207430897251189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -981,7 +974,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc197ea0b00d150439862d8ecf131069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  scenetoLoad: 1
 --- !u!1 &2343207431028993745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1134,18 +1127,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2343207431117164685}
         m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: LoadGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: gameMode, Assembly-CSharp
         m_MethodName: SoloMode
         m_Mode: 1
         m_Arguments:
@@ -1157,7 +1138,9 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
   targetTime: 1
-  deactivateobject: 1
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
 --- !u!114 &2343207431117164685
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1170,4 +1153,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc197ea0b00d150439862d8ecf131069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 1
+  scenetoLoad: 1

@@ -9,8 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4025631526871403508}
-  - component: {fileID: 4025631526871403506}
   - component: {fileID: 4025631526871403509}
+  - component: {fileID: 2547090421469913627}
   m_Layer: 0
   m_Name: PivotChasis
   m_TagString: Boom
@@ -34,34 +34,6 @@ Transform:
   m_Father: {fileID: 4025631528012744293}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &4025631526871403506
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4025631526871403511}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa4636c58919ba54aa6db16d79db417a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  tagCollide: Bullet
-  En_MyEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 4025631528012744289}
-        m_TargetAssemblyTypeName: Effects, Assembly-CSharp
-        m_MethodName: InstantiateEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
 --- !u!61 &4025631526871403509
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -88,6 +60,49 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.7003174, y: 2.5957413}
   m_EdgeRadius: 0
+--- !u!114 &2547090421469913627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4025631526871403511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c86f2955f30d9b4fa13800612597861, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tagCollide: Bullet
+  tagRespawn: 
+  En_MyEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4025631528012744289}
+        m_TargetAssemblyTypeName: Effects, Assembly-CSharp
+        m_MethodName: InstantiateEffect
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 4025631528012744292}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: Play
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Explode
+          m_BoolArgument: 0
+        m_CallState: 2
+  EnemySpawn: {fileID: 0}
+  ObjectiveUpdate: {fileID: 0}
 --- !u!1 &4025631527352255529
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,6 +371,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ae1f3062115c447a14d0ba77f2667c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playernumber: 0
   MouseAim: 1
   cannonRotor: {fileID: 4025631528529298958}
   forwardSpeed: 10

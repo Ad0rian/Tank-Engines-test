@@ -9,6 +9,7 @@ namespace Tank2DControllers
 {
 public class Tank2DMovement: MonoBehaviour
 {
+    //public int playernumber;
     public bool MouseAim;
     private Animator anim;
     void Start()
