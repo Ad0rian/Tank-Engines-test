@@ -101,8 +101,9 @@ MonoBehaviour:
           m_StringArgument: Explode
           m_BoolArgument: 0
         m_CallState: 2
-  EnemySpawn: {fileID: 0}
+  Spawn: {fileID: 0}
   ObjectiveUpdate: {fileID: 0}
+  playerint: 0
 --- !u!1 &4025631527352255529
 GameObject:
   m_ObjectHideFlags: 0
@@ -371,7 +372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ae1f3062115c447a14d0ba77f2667c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playernumber: 0
   MouseAim: 1
   cannonRotor: {fileID: 4025631528529298958}
   forwardSpeed: 10

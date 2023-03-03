@@ -24,7 +24,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595562955329420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.3, y: 18.8, z: 0}
+  m_LocalPosition: {x: -5, y: -24.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -55,7 +55,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595563253238727}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 90.2, y: 21.5, z: 0}
+  m_LocalPosition: {x: 13.5, y: 27.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -86,7 +86,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595563419902826}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 75.8, y: -3.9, z: 0}
+  m_LocalPosition: {x: -18.4, y: -4.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -118,7 +118,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595563465523217}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 31.7, y: -4.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -140,10 +140,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0627c36e18be84f4aac7f32297180ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagposition: ammopoint
-  fillerelement: {fileID: 540401204432717658, guid: 636a1d3349b242c46b9caaa801ce4342, type: 3}
+  tagposition: tankpointboy
+  fillerelement: {fileID: 0}
   isEnemy: 0
-  assignedTime: 5
+  isPlayer: 1
+  assignedTime: 2.5
 --- !u!1 &4314595564178138257
 GameObject:
   m_ObjectHideFlags: 0
@@ -169,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595564178138257}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -41.2, y: 41.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -191,10 +192,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0627c36e18be84f4aac7f32297180ca9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tagposition: ammopoint
-  fillerelement: {fileID: 540401204432717658, guid: 636a1d3349b242c46b9caaa801ce4342, type: 3}
+  tagposition: tankpoint
+  fillerelement: {fileID: 0}
   isEnemy: 0
-  assignedTime: 5
+  isPlayer: 1
+  assignedTime: 2.5
 --- !u!1 &4314595564229465386
 GameObject:
   m_ObjectHideFlags: 0
@@ -252,7 +254,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595564257420618}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7, y: -15.7, z: 0}
+  m_LocalPosition: {x: 5.8, y: -53.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -283,7 +285,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595564528252297}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 46.1, y: 50.2, z: 0}
+  m_LocalPosition: {x: -11.7, y: 57, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -314,7 +316,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4314595564606145064}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14, y: 46.3, z: 0}
+  m_LocalPosition: {x: -0.9, y: -4.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

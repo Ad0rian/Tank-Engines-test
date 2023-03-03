@@ -5,6 +5,7 @@ using Cinemachine;
 using UnityEngine.UI;
 using Tank2DControllers;
 using ObjectiveScene;
+using FillerpositionSpawn;
 
 namespace GenerateScene
 {
@@ -50,6 +51,8 @@ public class GenerateScene : MonoBehaviour
                 tank.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
                 tank.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagRespawn ="tankpoint";
                 tank.gameObject.transform.GetChild(2).GetComponent<hitbox>().playerint = 0;
+                tank.gameObject.transform.GetChild(2).GetComponent<hitbox>().gameObject.tag ="Untagged";
+                tank.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagCollide = "";
                 HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tank.GetComponentInChildren<Tank2DShootSystem>();           
 
             var entities = Instantiate(Enemies, new Vector3(-20, 12, 0), Quaternion.identity);
@@ -71,13 +74,13 @@ public class GenerateScene : MonoBehaviour
                 objective.GetComponent<Objectives>().objectivetext = objectiveSHUD.GetComponentInChildren<Text>();
                 objective.GetComponent<Objectives>().typeObjective = 0;
 
-
+ 
             break;
 
             case 1:
             m_MyEventmulti.Invoke();
 
-            tankm1 = Instantiate(myTankP1, new Vector3(-62, 17, 0), Quaternion.identity);
+            tankm1 = Instantiate(myTankP1, new Vector3(-32, 24, 0), Quaternion.identity);
 
 
                 tankm1.GetComponent<Tank2DMovement>().ShootInput = "ShootS";
@@ -95,10 +98,11 @@ public class GenerateScene : MonoBehaviour
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP1.GetComponentInChildren<SpeedHUD>();
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP1.gameObject.transform.GetChild(3).gameObject;
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
-                tankm1.gameObject.transform.GetChild(2).GetComponent<hitbox>().playerint = 0;
+                tankm1.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagRespawn ="tankpoint";
+                tankm1.gameObject.transform.GetChild(2).GetComponent<hitbox>().playerint = 1;
                 HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tankm1.GetComponentInChildren<Tank2DShootSystem>();
             
-            tankm2 = Instantiate(myTankP2, new Vector3(30, -2, 0), Quaternion.identity);
+            tankm2 = Instantiate(myTankP2, new Vector3(13, -7, 0), Quaternion.identity);
             
 
                 tankm2.GetComponent<Tank2DMovement>().ShootInput = "ShootK";
@@ -117,7 +121,8 @@ public class GenerateScene : MonoBehaviour
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP2.GetComponentInChildren<SpeedHUD>();
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP2.gameObject.transform.GetChild(3).gameObject;
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP2.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
-                tankm2.gameObject.transform.GetChild(2).GetComponent<hitbox>().playerint = 1;       
+                tankm2.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagRespawn ="tankpointboy";
+                tankm2.gameObject.transform.GetChild(2).GetComponent<hitbox>().playerint = 0;       
                 HUDP2.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tankm2.GetComponentInChildren<Tank2DShootSystem>();
                 
                 
@@ -135,6 +140,9 @@ public class GenerateScene : MonoBehaviour
                 objectivem.GetComponent<Objectives>().maxpunctuation = 3;
                 objectivem.GetComponent<Objectives>().timertext = timerTime.GetComponentInChildren<Text>();
                 objectivem.GetComponent<Objectives>().transition = GameObject.Find("CanvasTransition").GetComponent<Animator>();
+                GameObject.FindWithTag("tankpoint").GetComponent<Fillerposition>().fillerelement= tankm1;
+                GameObject.FindWithTag("tankpointboy").GetComponent<Fillerposition>().fillerelement= tankm2;
+                
                 objectivem.GetComponent<Objectives>().score = scoreMulti;
                 objectivem.GetComponent<Objectives>().objectivetext = objectiveMHUD.gameObject.transform.GetChild(2).GetComponent<Text>();
                 objectivem.GetComponent<Objectives>().objectivetextp2 = objectiveMHUD.gameObject.transform.GetChild(3).GetComponent<Text>();

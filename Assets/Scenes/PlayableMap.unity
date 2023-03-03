@@ -179,7 +179,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437605797}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: adca56a70e7bf704cb4f1a194828a518, type: 2}
   m_CullingMode: 0
@@ -667,6 +667,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4314595563419902826, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
+    - target: {fileID: 4314595564178138257, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4314595564229465386, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4314595564229465386, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
       propertyPath: m_Name
       value: tankpoints respawn
@@ -677,11 +689,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4314595564229465387, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -44.10457
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4314595564229465387, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.5500927
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4314595564229465387, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -715,6 +727,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4314595564257420618, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
+      propertyPath: m_Icon
+      value: 
+      objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117097ad8d8005f4d9f02830e30a72f5, type: 3}
 --- !u!1001 &4914023775652468579
@@ -794,14 +810,6 @@ PrefabInstance:
     - target: {fileID: 7156016519334392355, guid: 20e271e85f843c64a98215d08b0e6241, type: 3}
       propertyPath: m_Name
       value: Main Camera
-      objectReference: {fileID: 0}
-    - target: {fileID: 7156016519334392358, guid: 20e271e85f843c64a98215d08b0e6241, type: 3}
-      propertyPath: near clip plane
-      value: 0.32
-      objectReference: {fileID: 0}
-    - target: {fileID: 7156016519334392358, guid: 20e271e85f843c64a98215d08b0e6241, type: 3}
-      propertyPath: orthographic size
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7156016519334392359, guid: 20e271e85f843c64a98215d08b0e6241, type: 3}
       propertyPath: m_RootOrder

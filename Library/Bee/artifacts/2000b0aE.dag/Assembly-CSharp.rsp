@@ -362,7 +362,6 @@
 "Assets/Scripts/Entities/Abilities/Fill.cs"
 "Assets/Scripts/Entities/Abilities/Fillerposition.cs"
 "Assets/Scripts/Entities/hitbox.cs"
-"Assets/Scripts/Entities/respawnThings.cs"
 "Assets/Scripts/Entities/Tank/Bullet.cs"
 "Assets/Scripts/Entities/Tank/RespawnTank.cs"
 "Assets/Scripts/Entities/Tank/Tank2DMovement.cs"

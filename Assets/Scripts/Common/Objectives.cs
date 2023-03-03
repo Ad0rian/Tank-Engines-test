@@ -51,7 +51,7 @@ public class Objectives : MonoBehaviour
             break;
         }
         
-        
+         
         
 
     }
@@ -61,25 +61,24 @@ public class Objectives : MonoBehaviour
         score.GetComponentInChildren<Text>().text = Mathf.RoundToInt(timerpunctuation).ToString();
         transition.Play("closedTransition");
         score.SetActive(true);
-        m_MyEventscore.Invoke();
-    }
-
-    public void lifes()
-    {
-
         if (typeObjective == 1)
         {
             switch(tankplayer)
             {
                 case 0:
-
+                score.gameObject.transform.GetChild(2).gameObject.SetActive(false);
                 break;
 
                 case 1:
-                
+                score.gameObject.transform.GetChild(1).gameObject.SetActive(false);
                 break;
             }
         }
+        m_MyEventscore.Invoke();
+    }
+
+    public void lifes()
+    {
         m_MyEventpoints.Invoke();
     }
 }

@@ -253,7 +253,7 @@ MonoBehaviour:
   m_MyEvent:
     m_PersistentCalls:
       m_Calls: []
-  targetTime: 0.3
+  targetTime: 0.2
   deactivateObject: 0
   startertime: 1
   destroyObject: 1

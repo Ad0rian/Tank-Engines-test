@@ -9,21 +9,22 @@ public class Fillerposition : MonoBehaviour
     public string tagposition;
     public GameObject fillerelement;
     public bool isEnemy = false;
+    public bool isPlayer = false;
     bool activaterelocation;
     GameObject[] spawnPoints;
     GameObject currentPoint;
     public float assignedTime = 5.0f;
     private float counterTime;
-
     int index;
-    // Start is called before the first frame update
+
     void Start()
     {
         counterTime = assignedTime;
         spawnPoints = GameObject.FindGameObjectsWithTag(tagposition);
         index = Random.Range (0, spawnPoints.Length);
-        if(isEnemy)firstPositionLocation();
-        else PositionLocation(); 
+        
+        if(!isPlayer) PositionLocation();
+        if(isEnemy)firstPositionLocation(); 
         
     }
 
@@ -40,13 +41,23 @@ public class Fillerposition : MonoBehaviour
                 }
             }
         }
-    // Update is called once per frame
+
     void PositionLocation()
     {
         currentPoint = spawnPoints[index];
         counterTime = assignedTime;
         activaterelocation = false;
-        Instantiate(fillerelement, currentPoint.transform.position, Quaternion.identity);
+        if(isPlayer) 
+        {
+            Debug.Log(fillerelement);
+            fillerelement.GetComponentInChildren<Tank2DShootSystem>().currentAmmo = 10;
+            fillerelement.GetComponentInChildren<Tank2DShootSystem>().shieldStatus = false;
+            fillerelement.GetComponentInChildren<Tank2DShootSystem>().speedStatus = false;
+            fillerelement.GetComponentInChildren<Tank2DShootSystem>().UpdatingHUD();
+            fillerelement.transform.position = currentPoint.transform.position;
+            fillerelement.transform.rotation = currentPoint.transform.rotation;
+        }
+        else Instantiate(fillerelement, currentPoint.transform.position, Quaternion.identity);
         if(isEnemy)Destroy(currentPoint.gameObject);
     }
 

@@ -23,7 +23,7 @@ public class hitbox : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.tag.Equals(tagCollide))
         {
-            Spawn.RecolocateElement();
+            Spawn.RecolocateElement(); 
             Debug.Log("update");
             ObjectiveUpdate.UpdateObjective(playerint);
            
