@@ -811,6 +811,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ba38718d99a83b449855e7961e7e66bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedTank: {fileID: 0}
+  shieldTank: {fileID: 0}
   ammoTank:
   - {fileID: 2945747134853826917}
   - {fileID: 2945747133776506401}
@@ -1031,8 +1033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2945747134128778971}
   - component: {fileID: 2945747134128778974}
-  - component: {fileID: 2945747134128778972}
-  - component: {fileID: 2945747134128778973}
+  - component: {fileID: 5236365323020132362}
   m_Layer: 5
   m_Name: Abilities
   m_TagString: Untagged
@@ -1069,7 +1070,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2945747134128778968}
   m_CullTransparentMesh: 1
---- !u!114 &2945747134128778972
+--- !u!114 &5236365323020132362
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1078,23 +1079,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 2945747134128778968}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0b215ed857c0c96489c59aa423508532, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  shieldTank: {fileID: 1568492525457077806}
---- !u!114 &2945747134128778973
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2945747134128778968}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa304306bc3c21542b2fff2062f99d52, type: 3}
+  m_Script: {fileID: 11500000, guid: 8ce4555b94d332847b9cb784f33a986e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speedTank: {fileID: 1568492525457077806}
+  shieldTank: {fileID: 1568492525457077806}
 --- !u!1 &2945747134261579135
 GameObject:
   m_ObjectHideFlags: 0

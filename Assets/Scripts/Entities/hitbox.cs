@@ -30,4 +30,9 @@ public class hitbox : MonoBehaviour
             En_MyEvent.Invoke();   
         }
     }
+
+    public void DestroyEntity()
+    {
+        Destroy(gameObject);
+    }
 }

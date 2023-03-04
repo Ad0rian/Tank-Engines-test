@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8711396610844322489}
   - component: {fileID: 8711396610844322494}
   - component: {fileID: 8711396610844322491}
+  - component: {fileID: 8940125954502505238}
   m_Layer: 0
   m_Name: Intro
   m_TagString: Untagged
@@ -47,21 +48,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myTankP1: {fileID: 4025631528012744296, guid: 4e4f80e0445a2054082e5cf0fc01cc59, type: 3}
-  myTankP2: {fileID: 4025631528012744296, guid: 4e4f80e0445a2054082e5cf0fc01cc59, type: 3}
   Enemies: {fileID: 2587020738308304142, guid: 526b3349f1cdc8042880d29c16bc87cd, type: 3}
-  MainCamera: {fileID: 0}
   cameraPlayer1: {fileID: 7772423099954637269, guid: 3396da2b044f0f744b3a0b2d09defc97, type: 3}
-  cameraPlayer2: {fileID: 184490249656402052, guid: 758981f0174836b40bfd16e3d6fc501d, type: 3}
   HUDP1: {fileID: 0}
-  HUDP2: {fileID: 0}
-  objectiveS: {fileID: 5922330677873396328, guid: 31c0a5409fc66da42921730655112d6e, type: 3}
-  objectiveM: {fileID: 6037964508621399150, guid: 3108955436fe44949ac8c83b2e7c8026, type: 3}
+  objectives: {fileID: 0}
   objectiveSHUD: {fileID: 0}
-  objectiveMHUD: {fileID: 0}
   scoreS: {fileID: 6430760290961957379, guid: 8be23b81810ece140b85f4d13ab076f6, type: 3}
-  scoreM: {fileID: 2591109699169574531, guid: 016c4a3cabb8cc64f9c10c97e691ccdb, type: 3}
   animationIntroS: {fileID: 1976357533928162199, guid: 16fc68585a569604a86aaadeb048894b, type: 3}
+  myTankP2: {fileID: 4025631528012744296, guid: 4e4f80e0445a2054082e5cf0fc01cc59, type: 3}
+  cameraPlayer2: {fileID: 184490249656402052, guid: 758981f0174836b40bfd16e3d6fc501d, type: 3}
+  HUDP2: {fileID: 0}
+  objectiveMHUD: {fileID: 0}
+  scoreM: {fileID: 2591109699169574531, guid: 016c4a3cabb8cc64f9c10c97e691ccdb, type: 3}
   animationIntroM: {fileID: 1205022204498954150, guid: 34d41cb27600aa842b9fbcdd3a5371a4, type: 3}
+  timerTime: {fileID: 0}
+  MainCamera: {fileID: 0}
   m_MyEventsolo:
     m_PersistentCalls:
       m_Calls:
@@ -156,7 +157,9 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   targetTime: 3.8
-  deactivateobject: 1
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
 --- !u!114 &8711396610844322491
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,4 +236,19 @@ MonoBehaviour:
           m_BoolArgument: 1
         m_CallState: 2
   targetTime: 6
-  deactivateobject: 1
+  deactivateObject: 1
+  startertime: 1
+  destroyObject: 0
+--- !u!114 &8940125954502505238
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8711396610844322490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc197ea0b00d150439862d8ecf131069, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scenetoLoad: 0

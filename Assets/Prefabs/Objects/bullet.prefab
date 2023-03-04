@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 6828717364664343348}
   - component: {fileID: 6828717364664343347}
   - component: {fileID: 6828717364664343349}
-  - component: {fileID: 3928379563985571162}
   m_Layer: 6
   m_Name: bullet
   m_TagString: Bullet
@@ -166,33 +165,9 @@ MonoBehaviour:
           m_StringArgument: Explode
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 3928379563985571162}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 6828717364664343337}
         m_TargetAssemblyTypeName: UnityEngine.Rigidbody2D, UnityEngine
         m_MethodName: Sleep
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 6828717364664343347}
-        m_TargetAssemblyTypeName: Effects, Assembly-CSharp
-        m_MethodName: InstantiateEffect
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -238,22 +213,3 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &3928379563985571162
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6828717364664343339}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d70767de442e7b4d97122fa95def623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  targetTime: 0.2
-  deactivateObject: 0
-  startertime: 1
-  destroyObject: 1

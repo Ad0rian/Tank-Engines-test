@@ -82,7 +82,6 @@ GameObject:
   - component: {fileID: 6880141097532916700}
   - component: {fileID: 6880141097532916702}
   - component: {fileID: 6880141097532916703}
-  - component: {fileID: 8274045545417756391}
   - component: {fileID: 7076968335022716274}
   - component: {fileID: 3073237871134944474}
   - component: {fileID: 5895774468615710130}
@@ -196,25 +195,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
---- !u!114 &8274045545417756391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6880141097532916696}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d70767de442e7b4d97122fa95def623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MyEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  targetTime: 0.15
-  deactivateObject: 0
-  startertime: 1
-  destroyObject: 1
 --- !u!114 &7076968335022716274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,18 +228,6 @@ MonoBehaviour:
   En_MyEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6880141097532916703}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Explode
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 6880141097412302327}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -272,17 +240,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 8274045545417756391}
-        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
-        m_MethodName: set_enabled
-        m_Mode: 6
+      - m_Target: {fileID: 6880141097532916703}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
+          m_StringArgument: Explode
+          m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 5895774468615710130}
         m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
@@ -308,20 +276,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 7076968335022716274}
-        m_TargetAssemblyTypeName: Effects, Assembly-CSharp
-        m_MethodName: InstantiateEffect
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  EnemySpawn: {fileID: 0}
+  Spawn: {fileID: 0}
   ObjectiveUpdate: {fileID: 0}
+  playerint: 0
 --- !u!58 &5895774468615710130
 CircleCollider2D:
   m_ObjectHideFlags: 0

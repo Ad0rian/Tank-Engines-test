@@ -21,6 +21,7 @@ public class GenerateScene : MonoBehaviour
     
     public UnityEngine.Events.UnityEvent m_MyEventsolo;
     public UnityEngine.Events.UnityEvent m_MyEventmulti;
+    
 
     // Start is called before the first frame update
     public void Start()
@@ -45,8 +46,7 @@ public class GenerateScene : MonoBehaviour
                 tank.GetComponent<Tank2DMovement>().accelerateInput = "Accelerate";
                 tank.GetComponent<Tank2DMovement>().camera = MainCamera;
                 tank.GetComponentInChildren<Tank2DShootSystem>().ammoHUD = HUDP1.GetComponentInChildren<AmmoHUD>();
-                tank.GetComponentInChildren<Tank2DShootSystem>().shieldHUD = HUDP1.GetComponentInChildren<ShieldHUD>();
-                tank.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP1.GetComponentInChildren<SpeedHUD>();
+                tank.GetComponentInChildren<Tank2DShootSystem>().abilityHUD = HUDP1.GetComponentInChildren<AbilityHUD>();
                 tank.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP1.gameObject.transform.GetChild(3).gameObject;
                 tank.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
                 tank.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagRespawn ="tankpoint";
@@ -94,8 +94,7 @@ public class GenerateScene : MonoBehaviour
                 tankm1.GetComponent<Tank2DMovement>().accelerateInput = "AccelerateS";
                 tankm1.GetComponent<Tank2DMovement>().camera = MainCamera;
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().ammoHUD = HUDP1.GetComponentInChildren<AmmoHUD>();
-                tankm1.GetComponentInChildren<Tank2DShootSystem>().shieldHUD = HUDP1.GetComponentInChildren<ShieldHUD>();
-                tankm1.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP1.GetComponentInChildren<SpeedHUD>();
+                tankm1.GetComponentInChildren<Tank2DShootSystem>().abilityHUD = HUDP1.GetComponentInChildren<AbilityHUD>();
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP1.gameObject.transform.GetChild(3).gameObject;
                 tankm1.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
                 tankm1.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagRespawn ="tankpoint";
@@ -117,8 +116,7 @@ public class GenerateScene : MonoBehaviour
                 tankm2.GetComponent<Tank2DMovement>().MouseAim = false;
                 tankm2.GetComponent<Tank2DMovement>().camera = MainCamera;
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().ammoHUD = HUDP2.GetComponentInChildren<AmmoHUD>();
-                tankm2.GetComponentInChildren<Tank2DShootSystem>().shieldHUD = HUDP2.GetComponentInChildren<ShieldHUD>();
-                tankm2.GetComponentInChildren<Tank2DShootSystem>().speedHUD = HUDP2.GetComponentInChildren<SpeedHUD>();
+                tankm2.GetComponentInChildren<Tank2DShootSystem>().abilityHUD = HUDP2.GetComponentInChildren<AbilityHUD>();
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilityHUD = HUDP2.gameObject.transform.GetChild(3).gameObject;
                 tankm2.GetComponentInChildren<Tank2DShootSystem>().SpeedAbilitytimer = HUDP2.gameObject.transform.GetChild(3).GetComponent<TimerSlider>();
                 tankm2.gameObject.transform.GetChild(2).GetComponent<hitbox>().tagRespawn ="tankpointboy";
@@ -154,8 +152,6 @@ public class GenerateScene : MonoBehaviour
         }
 
     }
-
-
 
     public void startgame()
     {

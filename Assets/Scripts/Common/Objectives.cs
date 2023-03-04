@@ -50,10 +50,6 @@ public class Objectives : MonoBehaviour
             if(maxpunctuation > objectivemulti)lifes();
             break;
         }
-        
-         
-        
-
     }
 
     public void EndGame()
