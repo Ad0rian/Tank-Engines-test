@@ -19,12 +19,10 @@ public class hitbox : MonoBehaviour
         ObjectiveUpdate = GameObject.FindWithTag("objectivesgame").GetComponent<Objectives>();
     }
 
-    
     void OnTriggerEnter2D(Collider2D collision){
         if (collision.tag.Equals(tagCollide))
         {
-            Spawn.RecolocateElement(); 
-            Debug.Log("update");
+            Spawn.RecolocateElement();
             ObjectiveUpdate.UpdateObjective(playerint);
            
             En_MyEvent.Invoke();   

@@ -262,7 +262,6 @@ GameObject:
   - component: {fileID: 6430760290961957401}
   - component: {fileID: 6430760290961957400}
   - component: {fileID: 6430760290961957383}
-  - component: {fileID: 6430760290961957382}
   - component: {fileID: 6430760290961957381}
   - component: {fileID: 7200171170859911049}
   m_Layer: 5
@@ -357,37 +356,6 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
---- !u!114 &6430760290961957382
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6430760290961957379}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d70767de442e7b4d97122fa95def623, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_MyEvent:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 6430760290961957381}
-        m_TargetAssemblyTypeName: LoadScene, Assembly-CSharp
-        m_MethodName: LoadGame
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  targetTime: 3.1
-  deactivateObject: 1
-  startertime: 1
-  destroyObject: 0
 --- !u!114 &6430760290961957381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -400,7 +368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc197ea0b00d150439862d8ecf131069, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneNumber: 0
+  scenetoLoad: 0
 --- !u!95 &7200171170859911049
 Animator:
   serializedVersion: 5

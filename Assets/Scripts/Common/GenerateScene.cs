@@ -7,8 +7,6 @@ using Tank2DControllers;
 using ObjectiveScene;
 using FillerpositionSpawn;
 
-namespace GenerateScene
-{
 
 public class GenerateScene : MonoBehaviour
 {   
@@ -17,24 +15,15 @@ public class GenerateScene : MonoBehaviour
     public GameObject timerTime;
     public Camera MainCamera;
     GameObject tank, tankm1, tankm2;
-
     
-    public UnityEngine.Events.UnityEvent m_MyEventsolo;
-    public UnityEngine.Events.UnityEvent m_MyEventmulti;
-    
-
-    // Start is called before the first frame update
     public void Start()
     {
-
         switch(LoadScene.sceneNumber)
         {
             case 0:
-            m_MyEventsolo.Invoke();
 
             tank = Instantiate(myTankP1, new Vector3(-34, -8, 0), Quaternion.identity);
                 
-
                 tank.GetComponent<Tank2DMovement>().ShootInput = "Shoot";
                 tank.GetComponent<Tank2DMovement>().ShieldInput = "Shield";
                 tank.GetComponent<Tank2DMovement>().keyboardHorizontalInput = "Horizontal";
@@ -56,15 +45,12 @@ public class GenerateScene : MonoBehaviour
                 HUDP1.gameObject.transform.GetChild(3).GetComponent<TimerSlider>().weapon = tank.GetComponentInChildren<Tank2DShootSystem>();           
 
             var entities = Instantiate(Enemies, new Vector3(-20, 12, 0), Quaternion.identity);
-
             var cameraS = Instantiate(cameraPlayer1, new Vector3(-20, 12, 0), Quaternion.identity);
 
                 cameraS.GetComponent<CinemachineVirtualCamera>().m_Follow = tank.transform;
 
             var objective = Instantiate(objectives, new Vector3(0, 0, 0), Quaternion.identity);
-
             var scoreSolo = Instantiate(scoreS, new Vector3(0, 0, 0), Quaternion.identity);
-
             var anim = Instantiate(animationIntroS, new Vector3(0, 0, 0), Quaternion.identity);
 
                 objective.GetComponent<Objectives>().maxpunctuation = 20;    
@@ -78,10 +64,7 @@ public class GenerateScene : MonoBehaviour
             break;
 
             case 1:
-            m_MyEventmulti.Invoke();
-
             tankm1 = Instantiate(myTankP1, new Vector3(-32, 24, 0), Quaternion.identity);
-
 
                 tankm1.GetComponent<Tank2DMovement>().ShootInput = "ShootS";
                 tankm1.GetComponent<Tank2DMovement>().ShieldInput = "ShieldS";
@@ -103,7 +86,6 @@ public class GenerateScene : MonoBehaviour
             
             tankm2 = Instantiate(myTankP2, new Vector3(13, -7, 0), Quaternion.identity);
             
-
                 tankm2.GetComponent<Tank2DMovement>().ShootInput = "ShootK";
                 tankm2.GetComponent<Tank2DMovement>().ShieldInput = "ShieldK";
                 tankm2.GetComponent<Tank2DMovement>().keyboardHorizontalInput = "HorizontalK";
@@ -130,23 +112,18 @@ public class GenerateScene : MonoBehaviour
                 cameraM.GetComponentInChildren<CinemachineTargetGroup>().m_Targets[1].target = tankm2.transform;
 
             var objectivem = Instantiate(objectives, new Vector3(0, 0, 0), Quaternion.identity);
-
             var scoreMulti = Instantiate(scoreM, new Vector3(0, 0, 0), Quaternion.identity);
-
             var animM = Instantiate(animationIntroM, new Vector3(0, 0, 0), Quaternion.identity);
                 
                 objectivem.GetComponent<Objectives>().maxpunctuation = 3;
                 objectivem.GetComponent<Objectives>().timertext = timerTime.GetComponentInChildren<Text>();
                 objectivem.GetComponent<Objectives>().transition = GameObject.Find("CanvasTransition").GetComponent<Animator>();
                 GameObject.FindWithTag("tankpoint").GetComponent<Fillerposition>().fillerelement= tankm1;
-                GameObject.FindWithTag("tankpointboy").GetComponent<Fillerposition>().fillerelement= tankm2;
-                
+                GameObject.FindWithTag("tankpointboy").GetComponent<Fillerposition>().fillerelement= tankm2;                
                 objectivem.GetComponent<Objectives>().score = scoreMulti;
                 objectivem.GetComponent<Objectives>().objectivetext = objectiveMHUD.gameObject.transform.GetChild(2).GetComponent<Text>();
                 objectivem.GetComponent<Objectives>().objectivetextp2 = objectiveMHUD.gameObject.transform.GetChild(3).GetComponent<Text>();
                 objectivem.GetComponent<Objectives>().typeObjective = 1;
-
-
 
             break;
         }
@@ -155,19 +132,27 @@ public class GenerateScene : MonoBehaviour
 
     public void startgame()
     {
+        timerTime.gameObject.SetActive(true);
+        GameObject.Find("UI").GetComponent<Animator>().enabled = true;
         switch(LoadScene.sceneNumber)
         {
+            
             case 0:
+                    HUDP1.SetActive(true);
                     tank.SetActive(true);
+                    objectiveSHUD.SetActive(true);
+
             break;
 
             case 1:
                     tankm1.SetActive(true);
                     tankm2.SetActive(true);
+                    objectiveMHUD.SetActive(true);
+                    HUDP1.SetActive(true);
+                    HUDP2.SetActive(true);
             break;
         }
     }
 
 }
 
-}

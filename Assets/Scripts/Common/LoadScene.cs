@@ -8,15 +8,13 @@ public class LoadScene : MonoBehaviour
 {
     public static int sceneNumber;
     public int scenetoLoad;
-    // Start is called before the first frame update
 
-        public void SoloMode()
+    public void SoloMode()
     {
         sceneNumber = 0;
         LoadGame();
     }
 
-    // Update is called once per frame
     public void MultiMode()
     {
         sceneNumber = 1;
@@ -25,9 +23,7 @@ public class LoadScene : MonoBehaviour
 
     public void QuitTheGame()
     {
-        Debug.Log ("The game is closed");
-        Application.Quit();
-            
+        Application.Quit();     
     }
 
     public void LoadGame()

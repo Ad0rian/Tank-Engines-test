@@ -727,8 +727,7 @@ MonoBehaviour:
   shieldStatus: 0
   speedStatus: 0
   ammoHUD: {fileID: 0}
-  shieldHUD: {fileID: 0}
-  speedHUD: {fileID: 0}
+  abilityHUD: {fileID: 0}
   Cannon: {fileID: 4025631528529298993}
   ShieldAbility: {fileID: 4025631528503509118}
   SpeedAbilityHUD: {fileID: 0}

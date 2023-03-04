@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class Effects : MonoBehaviour
 {
-    // Start is called before the first frame update
     public string NameEffect;
     public GameObject fillerelement;
     public GameObject placeapparition;
