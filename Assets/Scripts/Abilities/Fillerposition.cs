@@ -49,7 +49,6 @@ public class Fillerposition : MonoBehaviour
         activaterelocation = false;
         if(isPlayer) 
         {
-            Debug.Log(fillerelement);
             fillerelement.GetComponentInChildren<Tank2DShootSystem>().currentAmmo = 10;
             fillerelement.GetComponentInChildren<Tank2DShootSystem>().shieldStatus = false;
             fillerelement.GetComponentInChildren<Tank2DShootSystem>().speedStatus = false;
