@@ -5,32 +5,36 @@ using UnityEngine.UI;
 
 public class TimerSlider : MonoBehaviour
 {
-    public Tank2DShootSystem weapon;
-    public UnityEngine.Events.UnityEvent m_MyEvent;
-    public Slider timerSlider;
-    public float targetTime;
-    private float counterTime;
+   //Set player shoot system script.
+   public Tank2DShootSystem weapon;
+   //Set events will happen after the timer end.
+   public UnityEngine.Events.UnityEvent m_MyEvent;
+   //Set the hud slider ability.
+   public Slider timerSlider;
+   //Custom setting time.
+   public float targetTime;
+   //Counter that will decrease.
+   private float counterTime;
 
-    private void Start()
+   private void Start()
    {
-        RestartTimer();
+      RestartTimer();
    }
 
-    void Update()
-    {
- 
+   void Update()
+   {
+      //Timer counter update.
+
       counterTime -= Time.deltaTime;
       timerSlider.value = counterTime;
       
-      if (counterTime <= 0.0f)
-      {
-         timerEnded();
-      }
-   
+      if (counterTime <= 0.0f)timerEnded();   
    }
    
    void timerEnded()
    {
+      //Execute events when timer ends.
+
       m_MyEvent.Invoke();
       counterTime= targetTime;
       weapon.Speed();
@@ -39,8 +43,10 @@ public class TimerSlider : MonoBehaviour
 
    public void RestartTimer()
    {
-        timerSlider.maxValue = targetTime;
-        timerSlider.value = targetTime;
-        counterTime= targetTime;
+      //Restart slider value.
+      
+      timerSlider.maxValue = targetTime;
+      timerSlider.value = targetTime;
+      counterTime= targetTime;
    }
 }

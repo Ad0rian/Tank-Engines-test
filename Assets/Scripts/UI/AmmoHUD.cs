@@ -4,5 +4,6 @@ using UnityEngine;
 
 public class AmmoHUD : MonoBehaviour
 {
+    //Set Ammo array HUD.
     public GameObject [] ammoTank;
 }

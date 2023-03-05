@@ -363,7 +363,7 @@
 "Assets/Scripts/Common/Objectives.cs"
 "Assets/Scripts/Common/StartButton.cs"
 "Assets/Scripts/Entities/Bullet.cs"
-"Assets/Scripts/Entities/hitbox.cs"
+"Assets/Scripts/Entities/Hitbox.cs"
 "Assets/Scripts/Entities/Tank2DMovement.cs"
 "Assets/Scripts/Entities/Tank2DShootSystem.cs"
 "Assets/Scripts/Timers/SimpleTimer.cs"
@@ -372,7 +372,7 @@
 "Assets/Scripts/UI/AmmoHUD.cs"
 "Assets/Scripts/UI/Effects.cs"
 "Assets/Scripts/UI/LoadEffect.cs"
-"Assets/Scripts/UI/mainMenuInput.cs"
+"Assets/Scripts/UI/MainMenuInput.cs"
 -langversion:9.0
 
 /deterministic

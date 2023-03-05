@@ -4,22 +4,32 @@ using UnityEngine;
 using FillerpositionSpawn;
 using ObjectiveScene;
 
-public class hitbox : MonoBehaviour
+public class Hitbox : MonoBehaviour
 {
+    //Object to collide.
     public string tagCollide;
+    //Where place will spawn.
     public string tagRespawn;
-    public UnityEngine.Events.UnityEvent En_MyEvent;
-    public Fillerposition Spawn;
+    Fillerposition Spawn;
+    //Update objective.
     public Objectives ObjectiveUpdate;
+    //PlayerNumber P1 or P2.
     public int playerint;
+    //Set events will happen in the collision.
+    public UnityEngine.Events.UnityEvent En_MyEvent;
 
     void Start()
     {
+        //Set spawnpoint and objective.
+
         Spawn = GameObject.FindWithTag(tagRespawn).GetComponent<Fillerposition>();
         ObjectiveUpdate = GameObject.FindWithTag("objectivesgame").GetComponent<Objectives>();
     }
 
-    void OnTriggerEnter2D(Collider2D collision){
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        //When collission happens.
+
         if (collision.tag.Equals(tagCollide))
         {
             Spawn.RecolocateElement();
@@ -31,6 +41,8 @@ public class hitbox : MonoBehaviour
 
     public void DestroyEntity()
     {
+        //Destroy object.
+        
         Destroy(gameObject);
     }
 }

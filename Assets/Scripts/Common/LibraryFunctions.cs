@@ -7,6 +7,8 @@ namespace Tank2DLibraryFunctions
 {
     public static class LibraryFunctions
     {
+        //Update positions.
+
         public static bool IsZero(this float value) => !(Mathf.Abs(value) > 0.0f);
         public static bool IsZero(this Vector2 vector) => vector.sqrMagnitude < 9.99999943962493E-11;
         public static bool IsZero(this Vector3 vector) => vector.sqrMagnitude < 9.99999943962493E-11;     
@@ -15,23 +17,28 @@ namespace Tank2DLibraryFunctions
         public static Vector3 WithY(this Vector3 vector3, float y) => new Vector3(vector3.x, y, vector3.z);
         public static Vector2 WithX(this Vector2 vector3, float x) => new Vector2(x, vector3.y);
         public static Vector2 WithY(this Vector2 vector3, float y) => new Vector2(vector3.x, y);
+        
         public static bool IsExceeding(this Vector2 vector, float magnitude)
         {
             const float errorTolerance = 1.01f;
             return vector.sqrMagnitude > (magnitude * magnitude) * errorTolerance;
         }
+        
         public static bool IsExceeding(this Vector3 vector, float magnitude)
         {
             const float errorTolerance = 1.01f;
             return vector.sqrMagnitude > (magnitude * magnitude) * errorTolerance;
         }  
+        
         public static bool IsNaN(this Vector2 vector) => float.IsNaN(vector.x) || float.IsNaN(vector.y);   
         public static bool IsNaN(this Vector3 vector) => float.IsNaN(vector.x) || float.IsNaN(vector.y) || float.IsNaN(vector.z);
+
+        //Set velocity effect turret rotation.
         public static Quaternion SmoothDamp(Quaternion rot, Quaternion target, ref Quaternion deriv, float time) 
         {
             if (Time.deltaTime < Mathf.Epsilon) return rot;
             
-            // account for double-cover
+            //Account for double-cover
             var dot = Quaternion.Dot(rot, target);
             var multi = dot > 0f ? 1f : -1f;
             target.x *= multi;
@@ -39,7 +46,7 @@ namespace Tank2DLibraryFunctions
             target.z *= multi;
             target.w *= multi;
             
-            // smooth damp (nlerp approx)
+            //Smooth damp (nlerp approx)
             var result = new Vector4(
                 Mathf.SmoothDamp(rot.x, target.x, ref deriv.x, time),
                 Mathf.SmoothDamp(rot.y, target.y, ref deriv.y, time),
@@ -47,7 +54,7 @@ namespace Tank2DLibraryFunctions
                 Mathf.SmoothDamp(rot.w, target.w, ref deriv.w, time)
             ).normalized;
 		
-            // ensure deriv is tangent
+            //Ensure deriv is tangent
             var derivError = Vector4.Project(new Vector4(deriv.x, deriv.y, deriv.z, deriv.w), result);
             deriv.x -= derivError.x;
             deriv.y -= derivError.y;

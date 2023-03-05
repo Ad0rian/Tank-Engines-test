@@ -3,21 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class mainMenuInput : MonoBehaviour
+public class MainMenuInput : MonoBehaviour
 {
-
-
-    public Animator UITank, BGTank,PressedSolo ,PressedMulti ,PressedExit ;
+    //Set the UI background and event elements.
+    public Animator UITank, BGTank,PressedSolo ,PressedMulti ,PressedExit;
+    //Set the button elements.
     public GameObject ButtonSolo, ButtonMulti, ButtonExit, selectedButton;
+    //Set the variables for the bool animator status.
     private bool solo, multi, exit, soloBG, multiBG, exitBG, pressedactionsolo, pressedactionmulti, pressedactionexit;
 
     public void Start()
     {
+        //Set the button to be selected when game start.
+
         EventSystem.current.SetSelectedGameObject(selectedButton);
     }
 
-     void FixedUpdate()
+    private void Update()
     {
+        //Set the animator bool status to the declared variables.
+
         BGTank.SetBool("soloBG", soloBG);
         BGTank.SetBool("multiBG", multiBG);
         BGTank.SetBool("exitBG", exitBG);
@@ -27,13 +32,9 @@ public class mainMenuInput : MonoBehaviour
         PressedSolo.SetBool("pressedaction", pressedactionsolo);
         PressedMulti.SetBool("pressedaction", pressedactionmulti);
         PressedExit.SetBool("pressedaction", pressedactionexit);
-    }
-    private void Update(){
-        if (EventSystem.current.currentSelectedGameObject == null && Input.GetAxisRaw("Horizontal") !=0)
-        {
-            EventSystem.current.SetSelectedGameObject(selectedButton);
-            
-        }
+
+        //Set the Solo button animator behaviour.
+
         if (EventSystem.current.currentSelectedGameObject == ButtonSolo)
         {
             solo = true;
@@ -46,6 +47,9 @@ public class mainMenuInput : MonoBehaviour
             pressedactionmulti = false;
             pressedactionexit = false;
         }
+
+        //Set the Multi button animator behaviour.
+
         if (EventSystem.current.currentSelectedGameObject == ButtonMulti)
         {
             solo = false;
@@ -58,9 +62,11 @@ public class mainMenuInput : MonoBehaviour
             pressedactionmulti = true;
             pressedactionexit = false;
         }
+
+        //Set the Exit button animator behaviour.
+        
         if (EventSystem.current.currentSelectedGameObject == ButtonExit)
-        {
-            
+        {    
             solo = false;
             multi = false;
             exit = true;
@@ -71,6 +77,5 @@ public class mainMenuInput : MonoBehaviour
             pressedactionmulti = false;
             pressedactionexit = true;
         }
-
-}
+    }
 }
